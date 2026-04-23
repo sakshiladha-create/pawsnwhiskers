@@ -260,6 +260,65 @@ export const testimonials = [
 
 export const brandLogos = ["Nulo", "WellPet", "Barkly", "Purrfecto", "Tail Co.", "Kibble & Co.", "NestPet"];
 
+export const galleryItems = [
+  {
+    title: "Modern cat nook",
+    image:
+      "https://images.pexels.com/photos/6958160/pexels-photo-6958160.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Cat relaxing inside a modern wood pet house",
+    size: "small"
+  },
+  {
+    title: "Soft dog style",
+    image:
+      "https://images.pexels.com/photos/6568501/pexels-photo-6568501.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Small dog wearing a cozy pink sweater",
+    size: "small"
+  },
+  {
+    title: "Smart feeder routine",
+    image:
+      "https://images.pexels.com/photos/5732478/pexels-photo-5732478.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Border collie beside an automatic pet feeder",
+    size: "large"
+  },
+  {
+    title: "Gentle pet moments",
+    image:
+      "https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Child sitting with a rabbit in a cozy room",
+    size: "small"
+  },
+  {
+    title: "Cat lounge bed",
+    image:
+      "https://images.pexels.com/photos/7516508/pexels-photo-7516508.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Cat resting on a modern wooden lounge bed",
+    size: "small"
+  },
+  {
+    title: "Little pet mealtime",
+    image:
+      "https://images.pexels.com/photos/6846040/pexels-photo-6846040.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Guinea pig eating from a food bowl",
+    size: "small"
+  },
+  {
+    title: "Curious snack break",
+    image:
+      "https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Cat leaning down toward a bowl of food",
+    size: "small"
+  },
+  {
+    title: "Companions at home",
+    image:
+      "https://images.pexels.com/photos/4588069/pexels-photo-4588069.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Two dogs resting together indoors",
+    size: "small"
+  }
+];
+
 export const utilityShortcuts = [
   { title: "Shop", href: "/shop", icon: ShoppingBag },
   { title: "Account", href: "/account", icon: UserRound },

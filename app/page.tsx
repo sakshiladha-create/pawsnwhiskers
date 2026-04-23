@@ -2,6 +2,7 @@ import { BestDeals } from "@/components/home/best-deals";
 import { BrandStrip } from "@/components/home/brand-strip";
 import { BrowseCategories } from "@/components/home/browse-categories";
 import { CuratedCollection } from "@/components/home/curated-collection";
+import { Gallery } from "@/components/home/gallery";
 import { HeroCarousel } from "@/components/home/hero-carousel";
 import { LowPrices } from "@/components/home/low-prices";
 import { PromoBanners } from "@/components/home/promo-banners";
@@ -31,6 +32,7 @@ export default function Home() {
         <WideBanner />
         <TabbedProducts />
         <Testimonials />
+        <Gallery />
         <BrandStrip />
         <UtilityShortcuts />
       </main>
