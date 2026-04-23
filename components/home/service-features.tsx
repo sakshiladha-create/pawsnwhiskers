@@ -8,7 +8,7 @@ export function ServiceFeatures() {
           const Icon = feature.icon;
           return (
             <article key={feature.title} className="flex items-center gap-4 rounded-[24px] bg-cream px-5 py-6">
-              <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-brand text-white">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand text-white">
                 <Icon className="h-6 w-6" aria-hidden />
               </span>
               <div>

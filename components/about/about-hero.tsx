@@ -10,7 +10,7 @@ export function AboutHero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="container-full px-4 pt-6">
+    <section className="container-px pt-6">
       <div className="relative overflow-hidden rounded-[36px] bg-[#F8D8C8] p-6 shadow-soft md:p-12 lg:p-16">
         <PawPrint className="absolute left-8 top-8 h-16 w-16 -rotate-12 text-brand/20" aria-hidden />
         <Sparkles className="absolute bottom-10 left-1/2 h-12 w-12 text-white/70" aria-hidden />
