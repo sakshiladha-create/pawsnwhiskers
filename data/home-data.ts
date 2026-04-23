@@ -283,10 +283,10 @@ export const galleryItems = [
     size: "large"
   },
   {
-    title: "Gentle pet moments",
+    title: "Playful puppy face",
     image:
-      "https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg?auto=compress&cs=tinysrgb&w=700",
-    alt: "Child sitting with a rabbit in a cozy room",
+      "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Close-up portrait of a playful puppy",
     size: "small"
   },
   {
@@ -299,8 +299,8 @@ export const galleryItems = [
   {
     title: "Little pet mealtime",
     image:
-      "https://images.pexels.com/photos/6846040/pexels-photo-6846040.jpeg?auto=compress&cs=tinysrgb&w=700",
-    alt: "Guinea pig eating from a food bowl",
+      "https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Cat eating from a bowl",
     size: "small"
   },
   {
@@ -315,6 +315,13 @@ export const galleryItems = [
     image:
       "https://images.pexels.com/photos/4588069/pexels-photo-4588069.jpeg?auto=compress&cs=tinysrgb&w=700",
     alt: "Two dogs resting together indoors",
+    size: "small"
+  },
+  {
+    title: "Bright kitten portrait",
+    image:
+      "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=700",
+    alt: "Bright portrait of a curious kitten",
     size: "small"
   }
 ];

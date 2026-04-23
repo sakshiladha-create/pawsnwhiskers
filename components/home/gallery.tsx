@@ -7,7 +7,7 @@ import { SectionReveal } from "@/components/home/section-reveal";
 
 export function Gallery() {
   const reduceMotion = useReducedMotion();
-  const [first, second, large, fourth, fifth, sixth, seventh, eighth] = galleryItems;
+  const [first, second, large, fourth, fifth, sixth, seventh, eighth, ninth] = galleryItems;
 
   const cardMotion = reduceMotion ? {} : { whileHover: { y: -6 } };
 
@@ -53,6 +53,7 @@ export function Gallery() {
         <Card item={sixth} className="col-span-1 row-span-1 h-[280px]" />
         <Card item={seventh} className="col-span-1 row-span-1 h-[280px]" />
         <Card item={eighth} className="col-span-1 row-span-1 h-[280px]" />
+        <Card item={ninth} className="col-span-1 row-span-1 h-[280px]" />
       </div>
     </SectionReveal>
   );
