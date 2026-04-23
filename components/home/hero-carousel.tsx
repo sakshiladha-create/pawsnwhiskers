@@ -23,7 +23,7 @@ export function HeroCarousel() {
   const goTo = (index: number) => setActive((index + heroSlides.length) % heroSlides.length);
 
   return (
-<section className="container-full px-4 pt-6">
+<section className="container-px pt-6">
   <div className={`relative min-h-[620px] overflow-hidden rounded-[36px] ${slide.bg} shadow-soft`}>
     <AnimatePresence mode="wait">
       <motion.div
