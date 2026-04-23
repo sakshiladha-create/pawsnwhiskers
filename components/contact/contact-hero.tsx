@@ -10,7 +10,7 @@ export function ContactHero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="container-px pt-6">
+    <section className=" w-full px-4 pt-6">
       <div className="relative overflow-hidden rounded-[36px] bg-skysoft p-6 shadow-soft md:p-12 lg:p-16">
         <PawPrint className="absolute right-10 top-8 h-16 w-16 rotate-12 text-brand/20" aria-hidden />
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
