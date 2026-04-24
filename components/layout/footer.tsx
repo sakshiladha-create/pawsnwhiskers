@@ -1,8 +1,11 @@
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
+import { getLatestBlogPosts } from "@/data/blog-data";
 import { footerLinks } from "@/data/home-data";
 
 export function Footer() {
+  const latestPosts = getLatestBlogPosts(3);
+
   return (
     <footer className="bg-ink text-white">
       <div className="container-px py-14">
@@ -31,7 +34,7 @@ export function Footer() {
           </form>
         </div>
 
-        <div className="grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_1fr]">
+        <div className="grid gap-10 py-12 md:grid-cols-4 xl:grid-cols-[1.1fr_0.75fr_0.95fr_1fr]">
           <div>
             <h3 className="text-3xl font-black">Paws N Whiskers</h3>
             <p className="mt-3 max-w-sm text-sm leading-6 text-white/68">
@@ -47,7 +50,7 @@ export function Footer() {
           </div>
           <nav aria-label="Footer quick links">
             <h4 className="mb-4 text-sm font-black uppercase tracking-[0.16em] text-brand">Quick Links</h4>
-            <ul className="grid grid-cols-2 gap-3 text-sm font-bold text-white/72">
+            <ul className="grid grid-cols-1 gap-3 text-sm font-bold text-white/72">
               {footerLinks.map((link) => (
                 <li key={link}>
                   <Link className="focus-ring transition hover:text-brand" href={`/${link.toLowerCase().replaceAll(" ", "-")}`}>
@@ -57,6 +60,7 @@ export function Footer() {
               ))}
             </ul>
           </nav>
+
           <address className="not-italic">
             <h4 className="mb-4 text-sm font-black uppercase tracking-[0.16em] text-brand">Contact</h4>
             <div className="space-y-3 text-sm font-bold text-white/72">
@@ -74,6 +78,22 @@ export function Footer() {
               </a>
             </div>
           </address>
+
+                    <nav aria-label="Latest blog posts">
+            <h4 className="mb-4 text-sm font-black uppercase tracking-[0.16em] text-brand">Latest Blogs</h4>
+            <ul className="space-y-4 text-sm text-white/72">
+              {latestPosts.map((post) => (
+                <li key={post.id}>
+                  <p className="text-[11px] font-black uppercase tracking-[0.14em] text-white/45">
+                    {post.category} / {post.date}
+                  </p>
+                  <Link href={`/blog/${post.slug}`} className="focus-ring mt-1 block font-black leading-5 transition hover:text-brand">
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         <div className="border-t border-white/10 pt-6 text-center text-xs font-bold text-white/50">
