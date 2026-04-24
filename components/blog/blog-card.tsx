@@ -6,18 +6,32 @@ import type { BlogPost } from "@/data/blog-data";
 export function BlogCard({ post, compact = false }: { post: BlogPost; compact?: boolean }) {
   return (
     <article className="group h-full overflow-hidden rounded-[30px] bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-      <Link href={`/blog/${post.slug}`} className="block overflow-hidden">
-        <Image
-          src={post.image}
-          alt={post.imageAlt}
-          width={820}
-          height={560}
-          className={`w-full object-cover transition duration-500 group-hover:scale-105 ${compact ? "h-56" : "h-64"}`}
-        />
-      </Link>
-      <div className="p-6">
+      <div className="relative overflow-hidden">
+        <Link href={`/blog/${post.slug}`} className="block overflow-hidden">
+          <Image
+            src={post.image}
+            alt={post.imageAlt}
+            width={820}
+            height={560}
+            className={`w-full object-cover transition duration-500 group-hover:scale-105 ${compact ? "h-56" : "h-64"}`}
+          />
+        </Link>
+        <svg
+          viewBox="0 0 500 60"
+          preserveAspectRatio="none"
+          className="absolute bottom-[-1px] left-0 z-10 h-12 w-full"
+          aria-hidden
+        >
+          <path
+            d="M0,35 C80,55 150,10 250,32 C340,52 420,18 500,35 L500,60 L0,60 Z"
+            fill="#EAF3FF"
+          />
+        </svg>
+      </div>
+
+      <div className="relative bg-[#EAF3FF] px-6 pb-6 pt-4">
         <div className="flex flex-wrap items-center gap-3 text-xs font-black uppercase tracking-[0.14em] text-ink/48">
-          <span className="rounded-full bg-[#FBE4D7] px-3 py-1.5 text-brand">{post.category}</span>
+          <span className="rounded-full bg-white px-3 py-1.5 text-brand">{post.category}</span>
           <span>{post.date}</span>
           <span className="inline-flex items-center gap-1.5">
             <Clock3 className="h-3.5 w-3.5" aria-hidden />

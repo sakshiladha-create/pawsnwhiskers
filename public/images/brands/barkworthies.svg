@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <rect width="260" height="80" rx="18" fill="#fff"/>
+  <circle cx="40" cy="40" r="16" fill="#4C6795" opacity=".12"/>
+  <path d="M30 50h20M34 30h12c6 0 10 4 10 10s-4 10-10 10H34V30Z" stroke="#DA8A70" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="72" y="36" fill="#4C6795" font-family="Arial, sans-serif" font-size="18" font-weight="700">Bark</text>
+  <text x="116" y="36" fill="#DA8A70" font-family="Arial, sans-serif" font-size="18" font-weight="700">worthies</text>
+</svg>

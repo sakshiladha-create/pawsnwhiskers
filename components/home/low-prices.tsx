@@ -13,7 +13,7 @@ export function LowPrices() {
     <SectionReveal className="container-px py-12">
       <div className="mb-8 text-center">
         <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Everyday Low Prices</p>
-        <h2 className="mt-2 text-4xl font-black text-ink md:text-5xl">Little prices, big tail wags</h2>
+        <h2 className="mt-2 text-4xl font-black text-[#4C6795] md:text-5xl">Little prices, big tail wags</h2>
       </div>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {lowPricePromos.map((promo) => (

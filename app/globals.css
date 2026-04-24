@@ -20,18 +20,34 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(218, 138, 112, 0.12), transparent 34rem),
-    linear-gradient(180deg, #fffaf4 0%, #ffffff 42%, #fffaf4 100%);
+    /* radial-gradient(circle at top left, rgba(218, 138, 112, 0.12), transparent 34rem),
+    linear-gradient(180deg, #fffaf4 0%, #ffffff 42%, #fffaf4 100%); */white;
   color: var(--ink);
-  font-family: "Nunito Sans", "Aptos", "Segoe UI", sans-serif;
+  font-family: var(--font-body), "Aptos", "Segoe UI", sans-serif;
 }
 
 h1,
 h2,
 h3,
+.hero-heading,
 .display-font {
-  font-family: "Cooper Black", "Georgia", serif;
+  font-family: var(--font-heading), "Trebuchet MS", cursive;
   letter-spacing: 0;
+}
+
+h4,
+h5,
+h6,
+p,
+span,
+button,
+input,
+select,
+textarea,
+li,
+label,
+a {
+  font-family: var(--font-body), "Aptos", "Segoe UI", sans-serif;
 }
 
 a {

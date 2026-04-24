@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <rect width="260" height="80" rx="18" fill="#fff"/>
+  <circle cx="40" cy="40" r="16" fill="#4C6795" opacity=".12"/>
+  <path d="M28 48c9-15 21-22 26-22 4 0 7 2 10 6-10 15-18 22-27 22-4 0-7-2-9-6Z" fill="#DA8A70"/>
+  <text x="72" y="36" fill="#4C6795" font-family="Arial, sans-serif" font-size="18" font-weight="700">Ark</text>
+  <text x="72" y="56" fill="#DA8A70" font-family="Arial, sans-serif" font-size="18" font-weight="700">Naturals</text>
+</svg>

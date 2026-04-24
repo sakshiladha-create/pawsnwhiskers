@@ -1,30 +1,30 @@
+import Image from "next/image";
 import { brandLogos } from "@/data/home-data";
 
 export function BrandStrip() {
   return (
-    <section className="overflow-hidden py-10" aria-label="Featured brands">
+    <section className="py-6" aria-label="Featured brands">
       <div className="container-px">
-        <div className="rounded-[30px] bg-white py-6 shadow-card overflow-hidden">
-          <div className="flex animate-[brand-scroll_24s_linear_infinite] gap-10 whitespace-nowrap px-8">
-            {[...brandLogos, ...brandLogos].map((brand, index) => (
-              <span key={`${brand}-${index}`} className="display-font text-2xl font-black text-ink/42">
-                {brand}
-              </span>
+        <div className="rounded-[10px] bg-[#3A2424] p-3 md:p-4">
+          <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-6">
+            {brandLogos.map((brand) => (
+              <div
+                key={brand.name}
+                className="flex min-h-[118px] flex-col items-center justify-center rounded-[18px] bg-white px-6 py-5 text-center"
+              >
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  width={60}
+                  height={60}
+                  className="h-[46px] w-[46px] rounded-full object-cover"
+                />
+                <span className="mt-3 text-[15px] font-black text-[#3A2424]">{brand.name}</span>
+              </div>
             ))}
           </div>
         </div>
       </div>
-      <style>{`
-        @keyframes brand-scroll {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-\\[brand-scroll_24s_linear_infinite\\] {
-            animation: none;
-          }
-        }
-      `}</style>
     </section>
   );
 }

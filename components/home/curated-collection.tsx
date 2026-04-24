@@ -30,8 +30,8 @@ export function CuratedCollection({ variant }: CuratedCollectionProps) {
             </div>
           </div>
         </article>
-        <div className="grid gap-5 md:grid-cols-3">
-          {collection.products.map((product) => (
+        <div className="grid gap-5 md:grid-cols-2">
+          {collection.products.slice(0, 2).map((product) => (
             <ProductCard key={`${variant}-${product.title}`} product={product} />
           ))}
         </div>
