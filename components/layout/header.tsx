@@ -7,13 +7,15 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/menu-data";
 import { MegaMenu } from "@/components/navigation/mega-menu";
 import { MobileMenu } from "@/components/navigation/mobile-menu";
+import { useShop } from "@/context/shop-context";
 
 export function Header() {
+  const { cartCount, wishlistCount } = useShop();
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
-  const shopButtonRef = useRef<HTMLButtonElement>(null);
+  const shopButtonRef = useRef<HTMLAnchorElement>(null);
 
   const closeMega = useCallback(() => setMegaOpen(false), []);
 
@@ -54,19 +56,23 @@ export function Header() {
           <nav className="hidden items-center justify-center gap-2 lg:flex" aria-label="Main navigation" onBlur={handleNavBlur}>
             {navItems.map((item) =>
               item.hasMegaMenu ? (
-                <button
+                <Link
                   key={item.label}
                   ref={shopButtonRef}
-                  type="button"
+                  href={item.href}
                   aria-haspopup="true"
                   aria-expanded={megaOpen}
                   className="focus-ring rounded-full px-5 py-3 text-sm font-black text-ink transition hover:bg-cream hover:text-brand"
                   onMouseEnter={() => setMegaOpen(true)}
                   onFocus={() => setMegaOpen(true)}
-                  onClick={() => setMegaOpen((value) => !value)}
+                  onMouseLeave={() => {
+                    if (!panelRef.current?.matches(":hover")) {
+                      closeMega();
+                    }
+                  }}
                 >
                   {item.label}
-                </button>
+                </Link>
               ) : (
                 <Link
                   key={item.label}
@@ -86,12 +92,21 @@ export function Header() {
             <Link href="/account" aria-label="Account" className="focus-ring hidden h-11 w-11 items-center justify-center rounded-full bg-cream text-ink transition hover:bg-brand hover:text-white sm:flex">
               <UserRound className="h-5 w-5" aria-hidden />
             </Link>
-            <Link href="/wishlist" aria-label="Wishlist" className="focus-ring hidden h-11 w-11 items-center justify-center rounded-full bg-cream text-ink transition hover:bg-brand hover:text-white sm:flex">
+            <Link href="/wishlist" aria-label="Wishlist" className="focus-ring relative hidden h-11 w-11 items-center justify-center rounded-full bg-cream text-ink transition hover:bg-brand hover:text-white sm:flex">
               <Heart className="h-5 w-5" aria-hidden />
+              {wishlistCount ? (
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-[11px] font-black text-white">
+                  {wishlistCount}
+                </span>
+              ) : null}
             </Link>
             <Link href="/cart" aria-label="Cart" className="focus-ring relative flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition hover:bg-brand">
               <ShoppingBag className="h-5 w-5" aria-hidden />
-              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-[11px] font-black text-white">2</span>
+              {cartCount ? (
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-[11px] font-black text-white">
+                  {cartCount}
+                </span>
+              ) : null}
             </Link>
             <button
               type="button"
