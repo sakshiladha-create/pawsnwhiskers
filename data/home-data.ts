@@ -15,49 +15,49 @@ import {
 
 export const heroSlides = [
   {
-    eyebrow: "Luxury comfort for cozy paws",
-    title: "Soft beds, happy tails, brighter mornings.",
-    copy: "Premium pet essentials with plush textures, playful shapes, and everyday prices your cart will love.",
-    primaryCta: "Shop Comfort",
-    secondaryCta: "View Deals",
-    href: "/category/dog-essentials/dog-beds",
-    image:
-      "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    bg: "bg-[#F8D8C8]"
+    eyebrow: "Get 10% Discount",
+    title: "Where Being A Pet Is Just The Best",
+    copy: "Discover playful essentials, cozy beds, tasty treats, and everyday care for happy cats and dogs.",
+    primaryCta: "Shop Now",
+    href: "/shop",
+    image: "/images/slider_1.webp",
+    bg: "bg-[#F4F4FF]",
+    headingColor: "text-[#4C6795]",
+    eyebrowColor: "text-[#5A78B3]"
   },
   {
-    eyebrow: "Feeding time, styled beautifully",
-    title: "Smart feeders and bowls for tidy routines.",
-    copy: "Curated accessories that make breakfast easier, cleaner, and much more photogenic.",
-    primaryCta: "Shop Feeders",
-    secondaryCta: "Explore Supplies",
-    href: "/category/cat-essentials/cat-supplies",
-    image:
-      "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    bg: "bg-[#D9EDF6]"
+    eyebrow: "New Pet Essentials",
+    title: "Everything Your Furry Friend Will Love",
+    copy: "Shop food, toys, grooming, beds, and accessories made for comfort, care, and fun.",
+    primaryCta: "Shop Now",
+    href: "/shop",
+    image: "/images/slider_2.webp",
+    bg: "bg-[#E8F8FF]",
+    headingColor: "text-[#4C6795]",
+    eyebrowColor: "text-[#5A78B3]"
   }
 ];
 
 export const serviceFeatures = [
   {
-    icon: Truck,
-    title: "Free Shipping",
-    copy: "On pet essentials over $49."
-  },
-  {
-    icon: Headphones,
-    title: "Customer Services",
-    copy: "Friendly help from real pet people."
+    icon: PackageCheck,
+    title: "Free Delivery",
+    copy: "Delivery to any point of the city and regions."
   },
   {
     icon: ShieldCheck,
-    title: "Our Guarantee",
-    copy: "Premium quality, easy returns."
+    title: "Easy and Secure",
+    copy: "Online payment with credit and debit card."
   },
   {
-    icon: BadgePercent,
-    title: "Exclusive Discount",
-    copy: "Fresh deals for loyal pet parents."
+    icon: Headphones,
+    title: "24/7 Support",
+    copy: "We are always ready to take your phone."
+  },
+  {
+    icon: Bone,
+    title: "100% Organic",
+    copy: "All products are 100% organic, certified."
   }
 ];
 
@@ -239,26 +239,60 @@ export const tabbedProducts = {
 
 export const testimonials = [
   {
-    name: "Maya R.",
-    role: "Two-cat household",
-    quote: "The bed quality is gorgeous, and the treats disappeared faster than anything we have bought before.",
-    rating: 5
+    title: "Favorite dry food",
+    name: "Thomas Brassington",
+    role: "Multi-cat household",
+    quote: "Our cats love these, and we get quite a few in a bag, so it’s a good value as well.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Curious cat near a bowl of food"
   },
   {
-    name: "Jordan P.",
+    title: "Puppy love it!",
+    name: "Katie Kelly",
     role: "New puppy parent",
-    quote: "The puppy collection made it simple to get everything in one go. It feels curated, not random.",
-    rating: 5
+    quote: "Our picky puppy enjoys the taste and finishes every bowl.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Happy puppy eating beside a bowl"
   },
   {
-    name: "Elena K.",
-    role: "Rescue volunteer",
-    quote: "Fast shipping, friendly support, and products that look beautiful in the home.",
-    rating: 5
+    title: "Quality at a great price",
+    name: "Noemi Medina",
+    role: "Cat parent",
+    quote: "I order regularly and have never had an issue. My cats prefer it over other brands.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/7516508/pexels-photo-7516508.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Cat resting on a curved pet lounge"
   }
 ];
 
-export const brandLogos = ["Nulo", "WellPet", "Barkly", "Purrfecto", "Tail Co.", "Kibble & Co.", "NestPet"];
+export const brandLogos = [
+  {
+    name: "Earth Animal",
+    image: "https://images.pexels.com/photos/4588069/pexels-photo-4588069.jpeg?auto=compress&cs=tinysrgb&w=240"
+  },
+  {
+    name: "Family Pet Food",
+    image: "https://images.pexels.com/photos/7210748/pexels-photo-7210748.jpeg?auto=compress&cs=tinysrgb&w=240"
+  },
+  {
+    name: "Stella & Chewy's",
+    image: "https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&w=240"
+  },
+  {
+    name: "Ark Naturals",
+    image: "https://images.pexels.com/photos/4587970/pexels-photo-4587970.jpeg?auto=compress&cs=tinysrgb&w=240"
+  },
+  {
+    name: "Animal Necessity",
+    image: "https://images.pexels.com/photos/7516508/pexels-photo-7516508.jpeg?auto=compress&cs=tinysrgb&w=240"
+  },
+  {
+    name: "Barkworthies",
+    image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=240"
+  }
+];
 
 export const galleryItems = [
   {

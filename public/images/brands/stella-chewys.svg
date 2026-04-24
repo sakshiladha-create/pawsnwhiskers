@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <rect width="260" height="80" rx="18" fill="#fff"/>
+  <circle cx="40" cy="40" r="17" fill="#DA8A70" opacity=".12"/>
+  <path d="M29 42h22M40 31v22" stroke="#4C6795" stroke-width="4" stroke-linecap="round"/>
+  <text x="70" y="34" fill="#4C6795" font-family="Arial, sans-serif" font-size="15" font-weight="700">Stella &amp;</text>
+  <text x="70" y="55" fill="#DA8A70" font-family="Arial, sans-serif" font-size="18" font-weight="700">Chewy's</text>
+</svg>

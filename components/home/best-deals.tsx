@@ -8,13 +8,13 @@ export function BestDeals() {
       <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Today&apos;s Best Deals</p>
-          <h2 className="mt-2 text-4xl font-black text-ink md:text-5xl">Cart-worthy pet favorites</h2>
+          <h2 className="mt-2 text-4xl font-black text-[#4C6795] md:text-5xl">Cart-worthy pet favorites</h2>
         </div>
         <p className="max-w-lg text-sm font-semibold leading-6 text-ink/60">
           Bright best sellers with premium textures, clean ingredients, and playful details.
         </p>
       </div>
-      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {products.map((product) => (
           <ProductCard key={product.title} product={product} />
         ))}

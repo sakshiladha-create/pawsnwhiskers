@@ -8,21 +8,9 @@ export function PromoBanners() {
 
   return (
     <SectionReveal className="container-px py-12">
-      <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
-        <Link href={large.href} className="focus-ring group relative min-h-[460px] overflow-hidden rounded-[34px] bg-brand p-8 text-white shadow-soft md:p-10">
-          <Image src={large.image} alt="" width={1000} height={760} className="absolute inset-0 h-full w-full object-cover opacity-55 transition duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/82 to-transparent" />
-          <div className="relative z-10 max-w-lg">
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-white/72">Fresh pantry picks</p>
-            <h2 className="mt-3 text-4xl font-black leading-tight md:text-6xl">{large.title}</h2>
-            <p className="mt-4 text-base font-semibold leading-7 text-white/80">{large.copy}</p>
-            <span className="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-black text-ink transition group-hover:bg-ink group-hover:text-white">
-              {large.cta}
-            </span>
-          </div>
-        </Link>
+      <div className="grid gap-5 lg:grid-cols-[0.75fr_1.25fr]">
 
-        <div className="grid gap-5">
+      <div className="grid gap-5">
           {smallPromos.map((promo, index) => (
             <Link
               key={promo.title}
@@ -40,6 +28,19 @@ export function PromoBanners() {
             </Link>
           ))}
         </div>
+
+        <Link href={large.href} className="focus-ring group relative min-h-[460px] overflow-hidden rounded-[34px] bg-brand p-8 text-white shadow-soft md:p-10">
+          <Image src={large.image} alt="" width={1000} height={760} className="absolute inset-0 h-full w-full object-cover opacity-55 transition duration-500 group-hover:scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/82 to-transparent" />
+          <div className="relative z-10 max-w-lg">
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-white/72">Fresh pantry picks</p>
+            <h2 className="mt-3 text-4xl font-black leading-tight md:text-6xl">{large.title}</h2>
+            <p className="mt-4 text-base font-semibold leading-7 text-white/80">{large.copy}</p>
+            <span className="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-black text-ink transition group-hover:bg-ink group-hover:text-white">
+              {large.cta}
+            </span>
+          </div>
+        </Link>
       </div>
     </SectionReveal>
   );
