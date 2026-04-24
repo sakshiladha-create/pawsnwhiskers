@@ -64,7 +64,7 @@ export function CategorySidebar(props: CategorySidebarProps) {
         </div>
       </div>
 
-      {[{ title: "Best Sellers", items: bestSellers }, { title: "New Arrivals", items: newArrivals }].map((group) => (
+      {/* {[{ title: "Best Sellers", items: bestSellers }, { title: "New Arrivals", items: newArrivals }].map((group) => (
         <div key={group.title} className="rounded-[28px] bg-white p-5 shadow-card">
           <h2 className="text-lg font-black text-ink">{group.title}</h2>
           <div className="mt-4 space-y-4">
@@ -79,9 +79,9 @@ export function CategorySidebar(props: CategorySidebarProps) {
             ))}
           </div>
         </div>
-      ))}
+      ))} */}
 
-      <div className="rounded-[28px] bg-white p-5 shadow-card">
+      {/* <div className="rounded-[28px] bg-white p-5 shadow-card">
         <h2 className="text-lg font-black text-ink">Filter By</h2>
         <div className="mt-5 space-y-5">
           <div>
@@ -160,7 +160,7 @@ export function CategorySidebar(props: CategorySidebarProps) {
             </select>
           </div>
         </div>
-      </div>
+      </div> */}
     </aside>
   );
 }
