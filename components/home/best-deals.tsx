@@ -14,7 +14,7 @@ export function BestDeals() {
           Bright best sellers with premium textures, clean ingredients, and playful details.
         </p>
       </div>
-      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
         {products.map((product) => (
           <ProductCard key={product.title} product={product} />
         ))}
