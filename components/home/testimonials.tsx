@@ -13,17 +13,17 @@ export function Testimonials() {
   const reviewTrack = [...testimonials, ...testimonials];
 
   return (
-    <SectionReveal className="relative overflow-hidden py-20 md:py-28">
-      <div className="absolute inset-0 z-0 bg-[#2D1F1F]" />
+    <SectionReveal className="relative overflow-hidden py-20 md:py-28 ">
+      <div className="absolute inset-0 z-0 bg-[#445B81]" />
 
       <motion.div
-        className="pointer-events-none absolute -left-16 -top-20 z-0 h-56 w-56 rounded-full bg-brand/45 blur-3xl"
+        className="pointer-events-none absolute -left-16 -top-20 z-0 h-56 w-56 rounded-full bg-brand blur-3xl"
         animate={reduceMotion ? undefined : { x: [0, 18, 0], y: [0, 10, 0] }}
         transition={{ duration: 14, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         aria-hidden
       />
       <motion.div
-        className="pointer-events-none absolute -bottom-20 right-0 z-0 h-64 w-64 rounded-full bg-[#4C6795]/55 blur-3xl"
+        className="pointer-events-none absolute -bottom-20 right-0 z-0 h-64 w-64 rounded-full bg-[#4C6795] blur-3xl"
         animate={reduceMotion ? undefined : { x: [0, -20, 0], y: [0, -12, 0] }}
         transition={{ duration: 16, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         aria-hidden
@@ -47,14 +47,14 @@ export function Testimonials() {
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
         <motion.div
-          className="absolute left-[8%] top-[20%] text-white/10"
+          className="absolute left-[8%] top-[20%] text-white/100"
           animate={reduceMotion ? undefined : { y: [0, -8, 0], rotate: [0, 4, 0] }}
           transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >
           <PawPrint className="h-10 w-10" />
         </motion.div>
         <motion.div
-          className="absolute right-[10%] top-[18%] text-white/10"
+          className="absolute right-[10%] top-[18%] text-white/100"
           animate={reduceMotion ? undefined : { y: [0, 8, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >
@@ -62,7 +62,7 @@ export function Testimonials() {
         </motion.div>
         <motion.svg
           viewBox="0 0 160 90"
-          className="absolute left-[10%] bottom-[24%] h-16 w-28 text-brand/20"
+          className="absolute left-[10%] bottom-[24%] h-16 w-28 text-brand/100"
           animate={reduceMotion ? undefined : { x: [0, 6, 0], y: [0, -4, 0] }}
           transition={{ duration: 11, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >
@@ -70,7 +70,7 @@ export function Testimonials() {
         </motion.svg>
         <motion.svg
           viewBox="0 0 80 80"
-          className="absolute right-[14%] bottom-[22%] h-10 w-10 text-white/10"
+          className="absolute right-[10%] bottom-[22%] h-10 w-10 text-white/100"
           animate={reduceMotion ? undefined : { y: [0, 6, 0] }}
           transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >
@@ -119,23 +119,23 @@ export function Testimonials() {
                 transition={{ duration: 0.45, delay: index * 0.08, ease: "easeOut" }}
                 whileHover={reduceMotion ? undefined : { y: -4, scale: 1.01 }}
               >
-                <div className="flex w-[58%] flex-col bg-[#4C6795] p-6 text-white md:p-7">
+                <div className="flex w-[58%] flex-col bg-[#EEF7FA] p-6 text-black md:p-7">
                   <div className="flex gap-1 text-[#F7C948]" aria-label={`${testimonial.rating} star rating`}>
                     {Array.from({ length: testimonial.rating }).map((_, starIndex) => (
                       <Star key={starIndex} className="h-4 w-4 fill-current" aria-hidden />
                     ))}
                   </div>
-                  <h3 className="mt-5 text-2xl font-black text-white">{testimonial.title}</h3>
+                  <h3 className="mt-5 text-2xl font-black text-black">{testimonial.title}</h3>
                   <blockquote className="mt-4 text-base font-medium leading-8 text-white/88">&ldquo;{testimonial.quote}&rdquo;</blockquote>
                   <div className="mt-auto flex items-center gap-2 pt-6">
                     <PawPrint className="h-4 w-4 text-brand" aria-hidden />
                     <div>
-                      <p className="text-sm font-black text-white">{testimonial.name}</p>
+                      <p className="text-sm font-black text-black">{testimonial.name}</p>
                       <p className="text-xs font-bold uppercase tracking-[0.08em] text-white/62">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
-                <div className="relative w-[42%] overflow-hidden bg-[#EADCCF]">
+                <div className="relative w-[42%] overflow-hidden bg-[#fff]">
                   <motion.div whileHover={reduceMotion ? undefined : { scale: 1.04 }} transition={{ duration: 0.35, ease: "easeOut" }} className="h-full">
                     <Image
                       src={testimonial.image}
@@ -145,13 +145,13 @@ export function Testimonials() {
                       className="h-full w-full object-cover"
                     />
                   </motion.div>
-                  <button
+                  {/* <button
                     type="button"
                     aria-label={`Open review from ${testimonial.name}`}
                     className="focus-ring absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-brand transition hover:bg-brand hover:text-white"
                   >
                     <Plus className="h-5 w-5" aria-hidden />
-                  </button>
+                  </button> */}
                 </div>
               </motion.article>
             ))}

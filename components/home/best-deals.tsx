@@ -4,7 +4,7 @@ import { SectionReveal } from "@/components/home/section-reveal";
 
 export function BestDeals() {
   return (
-    <SectionReveal className="container-px py-12">
+    <SectionReveal className="container-px py-12 mt-20">
       <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Today&apos;s Best Deals</p>

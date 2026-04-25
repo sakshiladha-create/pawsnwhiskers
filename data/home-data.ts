@@ -204,12 +204,14 @@ export const curatedCollections = {
 export const midPromos = [
   {
     title: "Organic meals for sensitive tummies",
+    eyebrow: "Fresh Pantry Picks",
     copy: "Clean ingredient recipes with big flavor and gentle nutrition.",
     cta: "Shop Organic",
     href: "/category/dog-essentials/dog-food",
     image:
       "https://images.pexels.com/photos/7210747/pexels-photo-7210747.jpeg?auto=compress&cs=tinysrgb&w=900",
-    layout: "large"
+    layout: "large",
+    bg: "#7CCBE8"
   },
   {
     title: "Accessories sale",
@@ -217,7 +219,8 @@ export const midPromos = [
     cta: "Shop Supplies",
     href: "/category/cat-essentials/cat-supplies",
     image:
-      "https://images.pexels.com/photos/6816865/pexels-photo-6816865.jpeg?auto=compress&cs=tinysrgb&w=700"
+      "https://images.pexels.com/photos/6568944/pexels-photo-6568944.jpeg?auto=compress&cs=tinysrgb&w=700",
+    bg: "#F8AD95"
   },
   {
     title: "Pet expert hotline",
@@ -225,7 +228,8 @@ export const midPromos = [
     cta: "Contact Us",
     href: "/contact-us",
     image:
-      "https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg?auto=compress&cs=tinysrgb&w=700"
+      "https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg?auto=compress&cs=tinysrgb&w=700",
+    bg: "#9FA8ED"
   }
 ];
 

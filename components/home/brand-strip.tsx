@@ -3,7 +3,7 @@ import { brandLogos } from "@/data/home-data";
 
 export function BrandStrip() {
   return (
-    <section className="py-6" aria-label="Featured brands">
+    <section className="py-6 mt-20" aria-label="Featured brands">
       <div className="container-px">
         <div className="rounded-[10px] bg-[#3A2424] p-3 md:p-4">
           <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-6">
