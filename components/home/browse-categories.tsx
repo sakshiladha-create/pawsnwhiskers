@@ -5,7 +5,7 @@ import { SectionReveal } from "@/components/home/section-reveal";
 
 export function BrowseCategories() {
   return (
-    <SectionReveal className="relative overflow-hidden bg-[#182030] py-40 md:py-44">
+    <SectionReveal className="relative mt-20 overflow-hidden bg-[#445B81] py-40 md:py-44">
 
       {/* TOP WAVE */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-20 overflow-hidden" aria-hidden>

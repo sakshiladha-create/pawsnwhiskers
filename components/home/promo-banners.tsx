@@ -1,46 +1,124 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { midPromos } from "@/data/home-data";
 import { SectionReveal } from "@/components/home/section-reveal";
 
+const promoOrder = [midPromos[1], midPromos[2], midPromos[0]];
+
+const promoStyles = [
+  {
+    bg: "#F8AD95",
+    image:
+      "https://images.pexels.com/photos/4588019/pexels-photo-4588019.jpeg?auto=compress&cs=tinysrgb&w=700",
+    imageClass: "object-cover object-center",
+  },
+  {
+    bg: "#A6AEF0",
+    image:
+      "https://images.pexels.com/photos/4587971/pexels-photo-4587971.jpeg?auto=compress&cs=tinysrgb&w=700",
+    imageClass: "object-cover object-center",
+  },
+  {
+    bg: "#78C8E2",
+    image:
+      "https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=700",
+    imageClass: "object-cover object-center",
+  },
+];
+
 export function PromoBanners() {
-  const [large, ...smallPromos] = midPromos;
+  const reduceMotion = useReducedMotion();
 
   return (
-    <SectionReveal className="container-px py-12">
-      <div className="grid gap-5 lg:grid-cols-[0.75fr_1.25fr]">
+    <SectionReveal className="bg-white py-16 md:py-20">
+      <div className="container-px">
+        <div className="mx-auto max-w-[1320px]">
+          <div className="text-center">
+            <p className="inline-block border-b-2 border-[#8DB9FF] text-lg font-black text-[#8DB9FF]">
+              Offer For You
+            </p>
 
-      <div className="grid gap-5">
-          {smallPromos.map((promo, index) => (
-            <Link
-              key={promo.title}
-              href={promo.href}
-              className={`focus-ring group relative min-h-[220px] overflow-hidden rounded-[30px] p-7 shadow-card ${index === 0 ? "bg-skysoft text-ink" : "bg-ink text-white"}`}
+            <h2
+              className="mt-3 text-[2.35rem] font-black leading-tight text-[#4C6795] md:text-[3.2rem]"
+              style={{ fontFamily: "var(--font-heading)" }}
             >
-              <Image src={promo.image} alt="" width={700} height={420} className="absolute -right-8 bottom-0 h-full w-1/2 object-cover opacity-72 transition duration-500 group-hover:scale-105" />
-              <div className="relative z-10 max-w-[58%]">
-                <h3 className="text-3xl font-black leading-tight">{promo.title}</h3>
-                <p className={`mt-3 text-sm font-semibold leading-6 ${index === 0 ? "text-ink/62" : "text-white/70"}`}>{promo.copy}</p>
-                <span className="mt-5 inline-flex rounded-full bg-brand px-5 py-2.5 text-sm font-black text-white transition group-hover:bg-white group-hover:text-ink">
-                  {promo.cta}
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <Link href={large.href} className="focus-ring group relative min-h-[460px] overflow-hidden rounded-[34px] bg-brand p-8 text-white shadow-soft md:p-10">
-          <Image src={large.image} alt="" width={1000} height={760} className="absolute inset-0 h-full w-full object-cover opacity-55 transition duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/82 to-transparent" />
-          <div className="relative z-10 max-w-lg">
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-white/72">Fresh pantry picks</p>
-            <h2 className="mt-3 text-4xl font-black leading-tight md:text-6xl">{large.title}</h2>
-            <p className="mt-4 text-base font-semibold leading-7 text-white/80">{large.copy}</p>
-            <span className="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-black text-ink transition group-hover:bg-ink group-hover:text-white">
-              {large.cta}
-            </span>
+              Who are waiting for you?
+            </h2>
           </div>
-        </Link>
+
+          <div className="mt-12 grid gap-7 lg:grid-cols-3">
+            {promoOrder.map((promo, index) => {
+              const style = promoStyles[index];
+
+              return (
+                <motion.article
+                  key={promo.title}
+                  initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.42,
+                    delay: reduceMotion ? 0 : index * 0.08,
+                    ease: "easeOut",
+                  }}
+                >
+                  <Link
+                    href={promo.href}
+                    className="focus-ring group relative flex h-[320px] overflow-hidden rounded-[26px] no-underline transition hover:-translate-y-1 md:h-[320px]"
+                    style={{ backgroundColor: style.bg }}
+                  >
+                    {/* TEXT */}
+                    <div className="relative z-20 flex w-[58%] flex-col justify-center px-8 py-8">
+                      {"eyebrow" in promo && promo.eyebrow ? (
+                        <p className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-[#16365F]">
+                          {promo.eyebrow}
+                        </p>
+                      ) : null}
+
+                      <h3
+                        className="max-w-[280px] text-[2rem] font-black leading-[1.05] text-white md:text-[2.25rem]"
+                        style={{ fontFamily: "var(--font-heading)" }}
+                      >
+                        {promo.title}
+                      </h3>
+
+                      <p className="mt-4 max-w-[250px] text-[1rem] font-semibold leading-7 text-white/95">
+                        {promo.copy}
+                      </p>
+
+                      <span className="mt-6 inline-flex w-fit rounded-full bg-white px-6 py-3 text-sm font-black text-[#DA8A70] transition group-hover:bg-[#4C6795] group-hover:text-white">
+                        {promo.cta}
+                      </span>
+                    </div>
+
+                    {/* IMAGE */}
+                    <div className="absolute inset-y-0 right-0 z-10 w-[46%] overflow-hidden">
+                      <Image
+                        src={style.image}
+                        alt={promo.title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, 100vw"
+                        className={`${style.imageClass} transition duration-500 group-hover:scale-105`}
+                      />
+                    </div>
+                  </Link>
+                </motion.article>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/shop"
+              className="focus-ring inline-flex rounded-full bg-[#DA8A70] px-8 py-4 text-base font-bold text-white transition hover:bg-[#4C6795]"
+            >
+              See more
+            </Link>
+          </div>
+        </div>
       </div>
     </SectionReveal>
   );

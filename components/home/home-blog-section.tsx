@@ -13,7 +13,7 @@ export function HomeBlogSection() {
       >
         <svg
           viewBox="0 0 1440 120"
-          className="h-full w-full fill-[#EAF3FF]"
+          className="h-full w-full fill-[#EEF7FA]"
           preserveAspectRatio="none"
         >
           <path d="M0,35 C240,85 420,80 680,40 C920,5 1120,35 1440,25 L1440,0 L0,0 Z" />

@@ -12,7 +12,7 @@ export function CuratedCollection({ variant }: CuratedCollectionProps) {
   const collection = curatedCollections[variant];
 
   return (
-    <SectionReveal className="container-px py-12">
+    <SectionReveal className="container-px py-12 mt-10">
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <article className="relative overflow-hidden rounded-[34px] bg-ink p-8 text-white shadow-soft md:p-10">
           <Image src={collection.image} alt={collection.eyebrow} width={900} height={760} className="absolute inset-0 h-full w-full object-cover opacity-50" />

@@ -46,11 +46,11 @@ export function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-40 bg-white/92 backdrop-blur-xl transition-shadow ${scrolled ? "shadow-card" : "shadow-none"}`}>
+    <header className={`sticky top-0 z-50 bg-white/20 backdrop-blur-xl transition-shadow ${scrolled ? "shadow-card" : "shadow-none"}`}>
       <div className="relative border-b border-black/5">
-        <div className="container-px flex h-20 items-center justify-between gap-4">
+        <div className="container-px flex h-24 items-center justify-between gap-4">
           <Link href="/" className="focus-ring flex min-w-[164px] items-center" aria-label="Paws N Whiskers home">
-            <Image src="/images/Pawlogo.png" alt="Paws N Whiskers" width={190} height={58} className="h-14 w-auto object-contain" priority />
+            <Image src="/images/Pawlogo.png" alt="Paws N Whiskers" width={190} height={58} className="h-24 w-auto object-contain" priority />
           </Link>
 
           <nav className="hidden items-center justify-center gap-2 lg:flex" aria-label="Main navigation" onBlur={handleNavBlur}>

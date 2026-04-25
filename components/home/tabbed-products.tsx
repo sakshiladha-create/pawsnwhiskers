@@ -13,7 +13,7 @@ export function TabbedProducts() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <SectionReveal className="container-px py-12">
+    <SectionReveal className="container-px py-12 mt-20">
       <div className="mb-8 text-center">
         <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Flea & Tick Solutions</p>
         <h2 className="mt-2 text-4xl font-black text-[#4C6795] md:text-5xl">Wellness picks by popularity</h2>
