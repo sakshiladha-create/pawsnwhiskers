@@ -4,6 +4,7 @@ import { BlogDetailHeader } from "@/components/blog/blog-detail-header";
 import { RelatedPosts } from "@/components/blog/related-posts";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { PageBanner } from "@/components/layout/page-banner";
 import { TopBar } from "@/components/layout/top-bar";
 import { getAllBlogPosts, getBlogCategoriesWithCount, getBlogPostBySlug, getLatestBlogPosts, getRelatedBlogPosts } from "@/data/blog-data";
 
@@ -26,6 +27,17 @@ export default async function BlogDetailPage({
       <main>
         {post ? (
           <>
+            <PageBanner
+              title={post.title}
+              subtitle={post.excerpt}
+              breadcrumbs={[
+                { label: "Home", href: "/" },
+                { label: "Blog", href: "/blog" },
+                { label: post.title }
+              ]}
+              backgroundImage={post.image}
+              variant="blog"
+            />
             <BlogDetailHeader post={post} />
             <BlogArticleContent
               post={post}

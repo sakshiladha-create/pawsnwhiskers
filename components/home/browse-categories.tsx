@@ -9,14 +9,14 @@ export function BrowseCategories() {
 
       {/* TOP WAVE */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-20 overflow-hidden" aria-hidden>
-        <svg viewBox="0 0 1440 120" className="h-full w-full fill-[#FFFDF8]" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 120" className="h-full w-full fill-[#fff]" preserveAspectRatio="none">
           <path d="M0,80 C200,120 400,0 700,60 C1000,110 1200,40 1440,70 L1440,0 L0,0 Z" />
         </svg>
       </div>
 
       {/* BOTTOM WAVE */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-20 overflow-hidden" aria-hidden>
-        <svg viewBox="0 0 1440 120" className="h-full w-full fill-[#FFFDF8]" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 120" className="h-full w-full fill-[#fff]" preserveAspectRatio="none">
           <path d="M0,50 C240,10 440,110 720,70 C980,40 1200,20 1440,60 L1440,120 L0,120 Z" />
         </svg>
       </div>

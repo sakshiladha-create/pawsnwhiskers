@@ -21,7 +21,7 @@ export function WideBanner() {
           <svg viewBox="0 0 1440 160" className="h-full w-full" preserveAspectRatio="none">
             <path
               d="M0,45 C130,56 252,34 386,48 C522,62 626,26 760,34 C888,42 1018,20 1160,28 C1280,34 1364,44 1440,36 L1440,0 L0,0 Z"
-              fill="#FFFDF8"
+              fill="#FFF"
             />
             <path
               d="M0,46 C118,56 258,31 392,46 C518,60 640,25 770,34 C906,43 1040,19 1172,27 C1292,34 1372,43 1440,38"
@@ -38,7 +38,7 @@ export function WideBanner() {
           <svg viewBox="0 0 1440 160" className="h-full w-full" preserveAspectRatio="none">
             <path
               d="M0,120 C132,98 258,136 396,118 C520,102 650,92 768,106 C906,122 1020,136 1148,122 C1260,110 1354,108 1440,120 L1440,160 L0,160 Z"
-              fill="#FFFDF8"
+              fill="#FFF"
             />
             <path
               d="M0,119 C126,98 264,134 402,116 C540,98 650,94 776,107 C900,120 1038,136 1162,122 C1278,108 1364,109 1440,121"
