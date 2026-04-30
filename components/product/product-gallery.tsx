@@ -10,7 +10,7 @@ export function ProductGallery({ product }: { product: ShopProduct }) {
   return (
     <section className="rounded-[32px] bg-white p-4 shadow-soft">
       <div className="overflow-hidden rounded-[28px] bg-cream">
-        <Image src={activeImage} alt={product.alt} width={1200} height={1200} className="h-[440px] w-full object-cover md:h-[560px]" />
+        <Image src={activeImage} alt={product.alt} width={1200} height={1200} className="h-[520px] w-full object-cover md:h-[520px]" />
       </div>
       <div className="mt-4 grid grid-cols-3 gap-3">
         {product.gallery.map((image) => (

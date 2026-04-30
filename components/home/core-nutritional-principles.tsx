@@ -43,8 +43,9 @@ export function CoreNutritionalPrinciples() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <SectionReveal className="container-px bg-white py-14 md:py-20 ">
-      <div className="mx-auto">
+    <SectionReveal className="relative overflow-hidden bg-white pb-16 md:pb-24">
+
+      <div className="container-px relative z-10 mx-auto">
         <div className="text-center">
           <PawPrint className="mx-auto h-7 w-7 fill-current text-brand" aria-hidden />
           <h2

@@ -30,7 +30,6 @@ export default function AboutUsPage() {
         <CoreValues />
         <KnowUsSection />
         <WhyChooseUs />
-        {/* <CoreNutritionalPrinciples /> */}
         <SupportStrip />
         <AboutFaq />
       </main>

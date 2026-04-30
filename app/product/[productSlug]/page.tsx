@@ -37,7 +37,7 @@ export default async function ProductDetailPage({
           variant="shop"
         />
         <section className="container-px py-10">
-          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <ProductGallery product={product} />
             <ProductInfo product={product} />
           </div>
