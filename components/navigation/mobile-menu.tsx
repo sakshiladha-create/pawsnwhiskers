@@ -36,14 +36,14 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           <motion.button
             type="button"
             aria-label="Close menu overlay"
-            className="fixed inset-0 z-50 bg-ink/45 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-[90] bg-ink/45 backdrop-blur-sm lg:hidden"
             initial={reduceMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
           />
           <motion.aside
-            className="fixed bottom-0 right-0 top-0 z-50 w-full max-w-[390px] overflow-y-auto bg-cream p-5 shadow-soft lg:hidden"
+            className="fixed bottom-0 right-0 top-0 z-[100] w-full max-w-[390px] overflow-y-auto bg-cream p-5 shadow-soft lg:hidden"
             initial={reduceMotion ? false : { x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -52,7 +52,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           >
             <div className="flex items-center justify-between border-b border-black/10 pb-5">
               <Link href="/" className="focus-ring flex items-center gap-3" onClick={onClose}>
-                <Image src="/images/Pawlogo.png" alt="Paws N Whiskers" width={172} height={52} className="h-12 w-auto object-contain" priority />
+                <Image src="/images/Pawlogo.png" alt="Paws N Whiskers" width={172} height={52} className="h-12 w-auto object-contain" />
               </Link>
               <button
                 type="button"

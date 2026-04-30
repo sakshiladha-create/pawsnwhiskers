@@ -3,6 +3,14 @@ import { Header } from "@/components/layout/header";
 import { PageBanner } from "@/components/layout/page-banner";
 import { TopBar } from "@/components/layout/top-bar";
 import { WishlistPageContent } from "@/components/shop/wishlist-page-content";
+import { createSeoMetadata } from "@/lib/seo";
+
+export const metadata = createSeoMetadata({
+  title: "Wishlist | Saved Pet Supplies",
+  description: "Save your favorite dog essentials, cat essentials, pet food, toys, beds, and wellness supplies to revisit while shopping.",
+  path: "/wishlist",
+  noIndex: true
+});
 
 export default function WishlistPage() {
   return (

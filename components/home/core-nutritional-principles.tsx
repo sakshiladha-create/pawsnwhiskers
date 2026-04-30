@@ -49,13 +49,13 @@ export function CoreNutritionalPrinciples() {
         <div className="text-center">
           <PawPrint className="mx-auto h-7 w-7 fill-current text-brand" aria-hidden />
           <h2
-            className="mt-4 text-[2rem] font-black leading-tight text-[#4C6795] md:text-[2.6rem]"
+            className="mt-4 text-3xl font-black leading-tight text-[#4C6795] md:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Core Nutritional Principles
           </h2>
           <p
-            className="mt-2 text-xl font-semibold italic text-brand md:text-[1.7rem]"
+            className="mt-2 text-xl font-semibold italic text-brand md:text-2xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             For pet reason
@@ -84,13 +84,13 @@ export function CoreNutritionalPrinciples() {
                 </div>
 
                 <h3
-                  className="mt-6 text-[1.65rem] font-black text-[#111111]"
+                  className="mt-6 text-2xl font-black text-[#111111]"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {principle.title}
                 </h3>
 
-                <p className="mt-4 whitespace-pre-line text-[15px] font-semibold leading-8 text-[#4B4B4B]">
+                <p className="mt-4 whitespace-pre-line text-sm font-semibold leading-8 text-[#4B4B4B]">
                   {principle.description}
                 </p>
               </motion.article>

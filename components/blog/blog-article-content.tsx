@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Heart, PawPrint, Sparkles } from "lucide-react";
 import type { BlogPost } from "@/data/blog-data";
 
 export function BlogArticleContent({
@@ -19,11 +19,37 @@ export function BlogArticleContent({
     <section className="container-px pb-14">
       <div className="mx-auto grid max-w-6xl gap-10 xl:grid-cols-[minmax(0,780px)_300px]">
         <article className="min-w-0">
-          <div className="rounded-[30px] bg-white p-7 shadow-card md:p-10">
+          <div className="overflow-hidden rounded-[30px] bg-white p-7 shadow-card md:p-10">
+            <div className="rounded-[26px] bg-[#FFF7F0] p-6">
+              <div className="flex items-center gap-2 text-sm font-black uppercase tracking-[0.14em] text-brand">
+                <Sparkles className="h-5 w-5" aria-hidden />
+                Friendly pet care guide
+              </div>
+              <p className="mt-3 text-lg font-semibold leading-9 text-ink/72">
+                {post.excerpt} Think of this as a warm, practical note for pet parents who want daily care to feel a little easier,
+                more playful, and more connected.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {[
+                ["Why it matters", "Small routines build trust, comfort, and calmer pet days."],
+                ["What to notice", "Watch your pet's appetite, energy, play style, and preferences."],
+                ["Try this today", "Choose one simple habit you can repeat with joy."]
+              ].map(([title, text]) => (
+                <div key={title} className="rounded-[22px] bg-cream p-5">
+                  <Heart className="h-5 w-5 fill-current text-brand" aria-hidden />
+                  <h3 className="mt-3 text-lg font-black text-ink">{title}</h3>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-ink/62">{text}</p>
+                </div>
+              ))}
+            </div>
+
             {post.content.map((block, index) => {
               if (block.type === "heading") {
                 return (
-                  <h2 key={index} className="mt-12 text-3xl font-black leading-tight text-ink first:mt-0 md:text-4xl">
+                  <h2 key={index} className="mt-12 flex items-center gap-3 text-3xl font-black leading-tight text-[#4C6795] first:mt-0 md:text-4xl">
+                    <PawPrint className="h-7 w-7 shrink-0 fill-current text-brand" aria-hidden />
                     {block.text}
                   </h2>
                 );
@@ -31,7 +57,7 @@ export function BlogArticleContent({
 
               if (block.type === "paragraph") {
                 return (
-                  <p key={index} className="mt-6 text-[17px] font-medium leading-9 text-ink/72">
+                  <p key={index} className="mt-6 text-lg font-medium leading-9 text-ink/72">
                     {block.text}
                   </p>
                 );
@@ -41,7 +67,8 @@ export function BlogArticleContent({
                 return (
                   <ul key={index} className="mt-7 space-y-4">
                     {block.items.map((item) => (
-                      <li key={item} className="rounded-[24px] bg-[#FFF7F0] px-5 py-4 text-base font-semibold leading-7 text-ink/74">
+                      <li key={item} className="flex gap-3 rounded-[24px] bg-[#FFF7F0] px-5 py-4 text-base font-semibold leading-7 text-ink/74">
+                        <PawPrint className="mt-1 h-4 w-4 shrink-0 fill-current text-brand" aria-hidden />
                         {item}
                       </li>
                     ))}
@@ -64,6 +91,17 @@ export function BlogArticleContent({
                 </blockquote>
               );
             })}
+
+            <div className="mt-10 rounded-[28px] bg-[#4C6795] p-6 text-white">
+              <div className="flex items-center gap-2 text-sm font-black uppercase tracking-[0.14em] text-brand">
+                <Sparkles className="h-5 w-5" aria-hidden />
+                Fun bonding ideas
+              </div>
+              <p className="mt-3 text-base font-semibold leading-8 text-white/82">
+                Turn this advice into a small ritual: offer a treat after grooming, rotate one toy before dinner, or spend five calm minutes
+                practicing a cue your pet already enjoys.
+              </p>
+            </div>
           </div>
 
           {(previousPost || nextPost) ? (
@@ -98,7 +136,7 @@ export function BlogArticleContent({
             <div className="mt-4 space-y-4">
               {latestPosts.map((entry) => (
                 <div key={entry.id} className="border-b border-black/6 pb-4 last:border-b-0 last:pb-0">
-                  <p className="text-[11px] font-black uppercase tracking-[0.12em] text-brand">{entry.date}</p>
+                  <p className="text-xs font-black uppercase tracking-[0.12em] text-brand">{entry.date}</p>
                   <Link href={`/blog/${entry.slug}`} className="focus-ring mt-1 block text-sm font-black leading-6 text-ink transition hover:text-brand">
                     {entry.title}
                   </Link>

@@ -14,16 +14,27 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  max-width: 100%;
+  /* overflow-x: hidden; */
   background:
     /* radial-gradient(circle at top left, rgba(218, 138, 112, 0.12), transparent 34rem),
     linear-gradient(180deg, #fffaf4 0%, #ffffff 42%, #fffaf4 100%); */white;
   color: var(--ink);
   font-family: var(--font-body), "Aptos", "Segoe UI", sans-serif;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 h1,
@@ -75,6 +86,88 @@ select {
 
 .pet-card {
   @apply rounded-[28px] border border-black/5 bg-white shadow-card;
+}
+
+@media (max-width: 1023.98px) {
+  .text-6xl {
+    font-size: clamp(2.35rem, 7.5vw, 3.75rem);
+  }
+
+  .text-5xl {
+    font-size: clamp(2rem, 6.5vw, 3rem);
+  }
+
+  .text-4xl {
+    font-size: clamp(1.75rem, 5.5vw, 2.25rem);
+  }
+
+  .text-3xl {
+    font-size: clamp(1.5rem, 4.5vw, 1.875rem);
+  }
+
+  .text-2xl {
+    font-size: clamp(1.25rem, 3.6vw, 1.5rem);
+  }
+
+  .text-xl {
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
+  }
+
+  .text-lg {
+    font-size: clamp(1rem, 2.4vw, 1.125rem);
+  }
+
+  .text-base {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+
+  .text-sm {
+    font-size: clamp(0.8rem, 1.45vw, 0.875rem);
+  }
+
+  .text-xs {
+    font-size: clamp(0.75rem, 1.2vw, 0.75rem);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .sm\:text-6xl {
+    font-size: clamp(2.35rem, 7.5vw, 3.75rem);
+  }
+
+  .sm\:text-5xl {
+    font-size: clamp(2rem, 6.5vw, 3rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .md\:text-6xl {
+    font-size: clamp(2.35rem, 7.5vw, 3.75rem);
+  }
+
+  .md\:text-5xl {
+    font-size: clamp(2rem, 6.5vw, 3rem);
+  }
+
+  .md\:text-4xl {
+    font-size: clamp(1.75rem, 5.5vw, 2.25rem);
+  }
+
+  .md\:text-3xl {
+    font-size: clamp(1.5rem, 4.5vw, 1.875rem);
+  }
+
+  .md\:text-2xl {
+    font-size: clamp(1.25rem, 3.6vw, 1.5rem);
+  }
+
+  .md\:text-lg {
+    font-size: clamp(1rem, 2.4vw, 1.125rem);
+  }
+
+  .md\:text-base {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

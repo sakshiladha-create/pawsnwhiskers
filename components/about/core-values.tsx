@@ -11,7 +11,7 @@ export function CoreValues() {
     <SectionReveal className="container-px py-12">
       <div className="mb-8 text-center ">
         <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Core Principles</p>
-        <h2 className="mt-2 font-black text-[#445b81] text-[2rem] leading-tight md:text-[2.6rem]">Care principles behind every shelf.</h2>
+        <h2 className="mt-2 font-black text-[#445b81] text-3xl leading-tight md:text-4xl">Care principles behind every shelf.</h2>
         <p className="mt-4 text-base font-semibold leading-7 text-ink/60">
           We balance joyful design with practical pet care, so every product has a clear purpose in the home.
         </p>

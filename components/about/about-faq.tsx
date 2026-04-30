@@ -14,7 +14,7 @@ export function AboutFaq() {
     <SectionReveal className="bg-white py-16 md:py-24">
       <div className="container-px">
       <div className="mx-auto mb-16 max-w-3xl text-center">
-        <h2 className="text-[2.35rem] font-black leading-tight text-[#445b81] md:text-[3.1rem]" style={{ fontFamily: "var(--font-heading)" }}>
+        <h2 className="text-4xl font-black leading-tight text-[#445b81] md:text-4xl" style={{ fontFamily: "var(--font-heading)" }}>
           Frequently Asked Questions
         </h2>
       </div>
@@ -35,8 +35,8 @@ export function AboutFaq() {
                 type="button"
                 aria-expanded={isOpen}
                 aria-controls={panelId}
-                className={`focus-ring flex w-full items-center justify-between gap-4 px-6 text-left text-[1.15rem] font-black md:px-8 ${
-                  isOpen ? "pb-5 pt-7 text-white md:text-[1.35rem]" : "py-7 text-[#111111] md:text-[1.28rem]"
+                className={`focus-ring flex w-full items-center justify-between gap-4 px-6 text-left text-xl font-black md:px-8 ${
+                  isOpen ? "pb-5 pt-7 text-white md:text-xl" : "py-7 text-[#111111] md:text-xl"
                 }`}
                 onClick={() => setOpenIndex(isOpen ? -1 : index)}
               >

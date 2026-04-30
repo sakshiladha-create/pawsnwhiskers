@@ -91,7 +91,7 @@ export function KnowUsSection() {
             </p>
 
             <h2
-              className="mt-4 max-w-[650px] text-[2.35rem] font-black leading-[1.08] text-[#3A302C] md:text-[3.1rem] xl:text-[3.55rem]"
+              className="mt-4 max-w-[650px] text-4xl font-black leading-[1.08] text-[#3A302C] md:text-4xl xl:text-5xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Making Happy Pet Moments And Accepting Love Every Day
@@ -129,13 +129,13 @@ export function KnowUsSection() {
             transition={{ duration: 0.45, ease: "easeOut" }}
           >
             <h3
-              className="max-w-[560px] text-[1.55rem] font-black leading-[1.22] text-[#DA8A70] md:text-[2rem]"
+              className="max-w-[560px] text-2xl font-black leading-[1.22] text-[#DA8A70] md:text-3xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               “Treasure Pet Moments With Unending Love, Joy, and Gentle Care”
             </h3>
 
-            <div className="mt-6 max-w-[560px] space-y-6 text-[16px] font-semibold leading-7 text-[#6D6660] md:text-[17px]">
+            <div className="mt-6 max-w-[560px] space-y-6 text-base font-semibold leading-7 text-[#6D6660] md:text-lg">
               <p>
                 Selecting the right care for your cat or dog starts with love, patience, and everyday comfort.
                 We bring joyful essentials that make pet parenting easier.
@@ -150,12 +150,12 @@ export function KnowUsSection() {
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p
-                    className="text-[2.15rem] font-black leading-none text-[#0F2A3A] md:text-[2.6rem]"
+                    className="text-3xl font-black leading-none text-[#0F2A3A] md:text-4xl"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {stat.value}
                   </p>
-                  <p className="mt-3 text-[10px] font-black uppercase tracking-[0.1em] text-[#6D6660] md:text-xs">
+                  <p className="mt-3 text-xs font-black uppercase tracking-[0.1em] text-[#6D6660] md:text-xs">
                     {stat.label}
                   </p>
                 </div>
@@ -163,10 +163,10 @@ export function KnowUsSection() {
             </div>
 
             <div className="mt-10">
-              <p className="font-serif text-[2.4rem] italic leading-none text-[#3A302C] md:text-[3rem]">
+              <p className="font-serif text-4xl italic leading-none text-[#3A302C] md:text-4xl">
                 Paws
               </p>
-              <div className="mt-2 flex flex-wrap items-center gap-2 text-[15px] font-black">
+              <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-black">
                 <span className="text-[#3A302C]">Kenneth Shih</span>
                 <span className="text-[#DA8A70]">(Co-Founder)</span>
               </div>

@@ -237,9 +237,9 @@ export function KnowUsSection() {
       <div className="container-px relative z-10 overflow-hidden">
         <div className="grid min-w-0 items-start gap-10 lg:grid-cols-[minmax(0,34%)_minmax(0,34%)_minmax(0,32%)]">
           <div>
-            <p className="mb-[18px] text-[14px] font-extrabold uppercase tracking-[0.08em] text-[#DA8A70]">KNOW US</p>
+            <p className="mb-[18px] text-sm font-extrabold uppercase tracking-[0.08em] text-[#DA8A70]">KNOW US</p>
             <h2
-              className="mb-10 max-w-[620px] text-[30px] font-black leading-[1.18] text-[#fff] md:mb-[72px] md:text-[36px]"
+              className="mb-10 max-w-[620px] text-3xl font-black leading-[1.18] text-[#fff] md:mb-[72px] md:text-4xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Making Happy Pet Moments And Accepting Love Every Day
@@ -276,12 +276,12 @@ export function KnowUsSection() {
             transition={{ duration: 0.45, ease: "easeOut" }}
           >
             <h3
-              className="mb-7 max-w-[560px] text-[28px] font-white leading-[1.18] text-brand"
+              className="mb-7 max-w-[560px] text-2xl font-white leading-[1.18] text-brand"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               &quot;Treasure Pet Moments With Unending Love, Joy, and Handling Gentle&quot;
             </h3>
-            <div className="max-w-[560px] space-y-[22px] text-[16px] font-bold leading-[1.7] text-[#fff]">
+            <div className="max-w-[560px] space-y-[22px] text-base font-bold leading-[1.7] text-[#fff]">
               <p>Selecting a cat or dog as a pet depends on individual preference or intent. Both can become wonderful companions.</p>
               <p>
                 Vitae pellentesque sem placerat in id cursus mi. Eu aenean sed diam urna tempor pulvinar vivamus. Iaculis massa nisl
@@ -292,10 +292,10 @@ export function KnowUsSection() {
             <div className="mt-[52px] grid grid-cols-3 gap-5 md:gap-[35px]">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-[36px] font-black leading-none text-[#fff] md:text-[42px]" style={{ fontFamily: "var(--font-heading)" }}>
+                  <p className="text-4xl font-black leading-none text-[#fff] md:text-4xl" style={{ fontFamily: "var(--font-heading)" }}>
                     {stat.value}
                   </p>
-                  <p className="mt-3 text-[11px] font-black uppercase tracking-[0.04em] text-brand md:text-[13px]">{stat.label}</p>
+                  <p className="mt-3 text-xs font-black uppercase tracking-[0.04em] text-brand md:text-sm">{stat.label}</p>
                 </div>
               ))}
             </div>

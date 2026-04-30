@@ -45,21 +45,6 @@ const tabs: Array<{
   }
 ];
 
-const descriptionPoints = [
-  "Crunchy bite-size texture",
-  "Salmon-inspired flavor pets love",
-  "Great for training and daily rewards",
-  "Easy to store and serve"
-];
-
-const infoItems = [
-  ["Flavor", "Salmon"],
-  ["Texture", "Crunchy"],
-  ["Pet Type", "Cats & Dogs"],
-  ["Best For", "Training, rewards, daily treats"],
-  ["Storage", "Keep sealed in a cool, dry place"]
-];
-
 const reviews = [
   {
     name: "Aanya P.",
@@ -114,6 +99,18 @@ function Stars() {
 export function ProductTabs({ product }: { product: ShopProduct }) {
   const [active, setActive] = useState<TabKey>("description");
   const reduceMotion = useReducedMotion();
+  const descriptionPoints = [
+    product.shortDescription,
+    `Designed for ${product.subcategoryTitle.toLowerCase()} routines`,
+    "Quality checked for everyday pet-parent confidence",
+    "Easy to store, serve, clean, or use as directed"
+  ];
+  const infoItems = [
+    ...product.additionalInfo.map((item) => [item.label, item.value]),
+    ["Pet Type", product.categoryTitle.replace(" Essentials", "")],
+    ["Best For", product.subcategoryTitle],
+    ["Storage", product.productType === "Food" ? "Keep sealed in a cool, dry place" : "Store clean and dry between uses"]
+  ];
 
   return (
     <section className="relative mt-10 overflow-hidden rounded-[32px] bg-white p-5 shadow-soft md:p-8">
@@ -164,16 +161,16 @@ export function ProductTabs({ product }: { product: ShopProduct }) {
           {active === "description" ? (
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
-                <h3 className="text-3xl font-black text-ink">Made for happy snack moments</h3>
+                <h3 className="text-3xl font-black text-ink">Made for happier {product.subcategoryTitle.toLowerCase()}</h3>
                 <p className="mt-4 text-base font-semibold leading-8 text-ink/68">
-                  These crunchy salmon-flavored mini treats are made for daily rewards, training breaks, and little moments of love.
-                  Their small size makes them easy to serve, while the rich aroma keeps pets excited every time you open the pack.
+                  {product.description} This {product.name.toLowerCase()} is selected for pet parents who want dependable{" "}
+                  {product.categoryTitle.toLowerCase()}, {product.productType.toLowerCase()} support, and everyday comfort for their pet.
                 </p>
               </div>
               <div className="rounded-[26px] bg-cream p-5">
                 <div className="mb-4 flex items-center gap-2 text-sm font-black uppercase tracking-[0.12em] text-brand">
                   <PackageCheck className="h-5 w-5" aria-hidden />
-                  Treat highlights
+                  Product benefits
                 </div>
                 <ul className="space-y-3">
                   {descriptionPoints.map((point) => (
@@ -232,7 +229,7 @@ export function ProductTabs({ product }: { product: ShopProduct }) {
       <div className="absolute bottom-0 z-10 p-6 text-white">
         <Truck className="h-9 w-9 text-white/90" aria-hidden />
         <h3 className="mt-4 text-2xl font-black">
-          Packed with care 🐾
+          Packed with care
         </h3>
         <p className="mt-3 text-sm font-semibold leading-7 text-white/90">
           Every order is packed with love so your pet essentials arrive fresh, safe, and ready to enjoy.

@@ -53,7 +53,7 @@ export function WideBanner() {
 
         <div className="relative z-30 flex min-h-[420px] items-center justify-center px-6 py-24 text-center md:min-h-[500px] md:px-10">
           <div className="max-w-[720px]">
-            <h2 className="mx-auto max-w-[14ch] text-4xl font-black leading-tight text-white md:text-6xl">
+            <h2 className="mx-auto max-w-[14ch] text-4xl font-black leading-tight text-white md:text-5xl">
               Save more on bowls, beds, toys, and treats.
             </h2>
             <p className="mx-auto mt-5 max-w-[620px] text-base font-medium leading-8 text-white/90 md:text-lg">

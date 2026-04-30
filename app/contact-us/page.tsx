@@ -7,6 +7,13 @@ import { Header } from "@/components/layout/header";
 import { PageBanner } from "@/components/layout/page-banner";
 import { TopBar } from "@/components/layout/top-bar";
 import { SupportStrip } from "@/components/shared/support-strip";
+import { createSeoMetadata } from "@/lib/seo";
+
+export const metadata = createSeoMetadata({
+  title: "Contact Us | Pet Store Support",
+  description: "Contact Paws & Whiskers for help with pet supplies, product guidance, orders, returns, dog essentials, cat essentials, and pet care questions.",
+  path: "/contact-us"
+});
 
 export default function ContactUsPage() {
   return (

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
@@ -36,7 +36,7 @@ export function WhyChooseUs() {
       <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr]">
         <div className="relative overflow-hidden rounded-[34px] p-8 shadow-soft md:p-10">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Why choose us</p>
-          <h2 className="mt-3 font-black text-[#445b81] text-[2rem] leading-tight md:text-[2.6rem]">
+          <h2 className="mt-3 font-black text-[#445b81] text-3xl leading-tight md:text-4xl">
             What makes us different from ordinary pet stores.
           </h2>
           <p className="mt-4 text-base font-semibold leading-7 text-ink/62">
@@ -70,11 +70,11 @@ export function WhyChooseUs() {
                   <Icon className="h-10 w-10 text-white" aria-hidden />
                 </div>
 
-                <h3 className="mt-6 text-[1.65rem] font-black text-[#111111]" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="mt-6 text-2xl font-black text-[#111111]" style={{ fontFamily: "var(--font-heading)" }}>
                   {item.title}
                 </h3>
 
-                <p className="mt-4 whitespace-pre-line text-[15px] font-semibold leading-8 text-[#4B4B4B]">{item.copy}</p>
+                <p className="mt-4 whitespace-pre-line text-sm font-semibold leading-8 text-[#4B4B4B]">{item.copy}</p>
               </motion.article>
             );
           })}

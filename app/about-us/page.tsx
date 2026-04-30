@@ -12,6 +12,13 @@ import { Header } from "@/components/layout/header";
 import { PageBanner } from "@/components/layout/page-banner";
 import { TopBar } from "@/components/layout/top-bar";
 import { SupportStrip } from "@/components/shared/support-strip";
+import { createSeoMetadata } from "@/lib/seo";
+
+export const metadata = createSeoMetadata({
+  title: "About Us | Trusted Pet Essentials & Supplies",
+  description: "Meet Paws & Whiskers, an online pet store focused on quality dog supplies, cat supplies, pet wellness, and joyful everyday care.",
+  path: "/about-us"
+});
 
 export default function AboutUsPage() {
   return (
@@ -21,7 +28,7 @@ export default function AboutUsPage() {
       <main>
         <PageBanner
           title="About Us"
-          subtitle="Everything your pet needs for comfort, care, and everyday joy."
+          subtitle="Trusted pet essentials, dog supplies, cat supplies, and wellness picks chosen for comfort, care, and everyday joy."
           breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
           variant="about"
         />

@@ -137,8 +137,8 @@ export function Footer() {
       </div>
 
       <div className="relative z-20 mx-auto max-w-[1320px] px-6 pb-10 pt-32 sm:px-8 lg:px-10 lg:pt-[140px]">
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 xl:grid-cols-[1.3fr_0.8fr_0.9fr_1.4fr]">
-          <div className="max-w-[300px]">
+        <div className="grid grid-cols-1 items-start gap-10 text-center md:grid-cols-2 md:text-left xl:grid-cols-[1.3fr_0.8fr_0.9fr_1.4fr]">
+          <div className="mx-auto max-w-[300px] md:mx-0">
             <Link href="/" className="focus-ring inline-flex items-center" aria-label="Paws & Whiskers home">
               <Image
                 src="/images/Pawlogo.png"
@@ -148,10 +148,10 @@ export function Footer() {
                 className="h-auto w-[150px] object-contain"
               />
             </Link>
-            <p className="mt-2 text-[14px] font-semibold leading-7 text-[#3A4B68]">
+            <p className="mt-2 text-sm font-semibold leading-7 text-[#3A4B68]">
               Your one-stop pet store for joyful, healthy, and playful lives. We bring love, care, and quality to every pet.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-6 flex items-center justify-center gap-3 md:justify-start">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -179,7 +179,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="inline-flex text-[14px] font-semibold text-[#15233E] transition hover:translate-x-1 hover:text-[#DA8A70]"
+                    className="inline-flex text-sm font-semibold text-[#15233E] transition hover:text-[#DA8A70] md:hover:translate-x-1"
                   >
                     {link.label}
                   </Link>
@@ -192,7 +192,7 @@ export function Footer() {
             <h3 className="mb-5 text-lg font-bold text-[#0F2240]" style={{ fontFamily: "var(--font-heading)" }}>
               Contact
             </h3>
-            <div className="space-y-3 text-[14px] font-semibold leading-7 text-[#3A4B68]">
+            <div className="space-y-3 text-sm font-semibold leading-7 text-[#3A4B68]">
                <p>
                 No: 568 A, East Madison Street,
                 <br />
@@ -234,11 +234,11 @@ export function Footer() {
 
         <div className="mt-12 border-t border-black/10 pt-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1.4fr_1.05fr] lg:items-center">
-            <div className="max-w-[360px]">
-              <h3 className="text-[1.85rem] font-black leading-tight text-[#0F2240]" style={{ fontFamily: "var(--font-heading)" }}>
+            <div className="mx-auto max-w-[360px] text-center lg:mx-0 lg:text-left">
+              <h3 className="text-2xl font-black leading-tight text-[#0F2240]" style={{ fontFamily: "var(--font-heading)" }}>
                 Subscribe to our newsletter
               </h3>
-              <p className="mt-3 text-[14px] font-semibold leading-7 text-[#3A4B68]">
+              <p className="mt-3 text-sm font-semibold leading-7 text-[#3A4B68]">
                Register to receive newsletters to be updated about
 the latest activities of the store,..
               </p>
@@ -252,22 +252,22 @@ the latest activities of the store,..
                 id="footer-email"
                 type="email"
                 placeholder="Email address"
-                className="h-16 flex-1 rounded-full border border-black/5 bg-white px-7 text-[14px] font-semibold text-[#15233E] outline-none transition placeholder:text-[#7A879B] focus:border-[#DA8A70]"
+                className="h-16 flex-1 rounded-full border border-black/5 bg-white px-7 text-sm font-semibold text-[#15233E] outline-none transition placeholder:text-[#7A879B] focus:border-[#DA8A70]"
               />
               <button
                 type="submit"
-                className="focus-ring h-16 rounded-full bg-[#DA8A70] px-8 text-[14px] font-bold text-white transition hover:bg-[#4C6795]"
+                className="focus-ring h-16 rounded-full bg-[#DA8A70] px-8 text-sm font-bold text-white transition hover:bg-[#4C6795]"
               >
                 Subscribe
               </button>
             </form>
 
-            <div className="lg:justify-self-end">
-              <div className="flex flex-wrap items-center gap-2">
+            <div className="text-center lg:justify-self-end lg:text-left">
+              <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
                 {paymentBadges.map((badge) => (
                   <span
                     key={badge.label}
-                    className={`rounded-md px-2.5 py-1.5 text-[11px] font-black tracking-[0.02em] ${badge.className}`}
+                    className={`rounded-md px-2.5 py-1.5 text-xs font-black tracking-[0.02em] ${badge.className}`}
                   >
                     {badge.label}
                   </span>

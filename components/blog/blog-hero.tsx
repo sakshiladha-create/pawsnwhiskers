@@ -10,7 +10,7 @@ export function BlogHero() {
             <Sparkles className="h-4 w-4" aria-hidden />
             Pet Journal
           </p>
-          <h1 className="mt-6 text-5xl font-black leading-[0.95] text-ink md:text-6xl">Pet Care Tips & Insights</h1>
+          <h1 className="mt-6 text-5xl font-black leading-[0.95] text-ink md:text-5xl">Pet Care Tips & Insights</h1>
           <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-ink/68 md:text-lg">
             Helpful reads on cats, dogs, food, grooming, toys, travel carriers, and the little routines that make pet life easier and brighter.
           </p>

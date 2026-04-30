@@ -58,7 +58,7 @@ export function PageBanner({
       <PawPattern />
 
       <div className="relative z-30 mx-auto flex h-full max-w-[760px] flex-col items-center justify-center pb-16 pt-10">
-        <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[0.95] text-white md:text-5xl lg:text-[56px]">
+        <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[0.95] text-white md:text-5xl lg:text-5xl">
           {title}
         </h1>
         {subtitle ? (
@@ -67,7 +67,7 @@ export function PageBanner({
           </p>
         ) : null}
         {breadcrumbs.length ? (
-          <nav aria-label="Breadcrumb" className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[15px] font-black text-white/90">
+          <nav aria-label="Breadcrumb" className="mt-5 flex flex-wrap items-center justify-center gap-2 text-sm font-black text-white/90">
             {breadcrumbs.map((item, index) => {
               const isLast = index === breadcrumbs.length - 1;
               return (

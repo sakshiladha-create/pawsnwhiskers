@@ -17,6 +17,15 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TopBar } from "@/components/layout/top-bar";
 import { ServicesOfferSection } from "@/components/home/services-offer-section";
+import { createSeoMetadata } from "@/lib/seo";
+
+export const metadata = createSeoMetadata({
+  title: "Paws & Whiskers | Pet Food, Toys, Beds & Essentials",
+  description: "Shop dog essentials, cat essentials, pet food, toys, beds, flea and tick care, and wellness supplies from a playful online pet shop.",
+  path: "/",
+  image: "/images/slider_1.webp",
+  absoluteTitle: true
+});
 
 export default function Home() {
   return (

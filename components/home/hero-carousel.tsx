@@ -82,7 +82,7 @@ export function HeroCarousel() {
             <div className="mx-auto grid min-h-[85vh] max-w-[1280px] items-center gap-10 px-6 pb-36 pt-14 md:min-h-[88vh] md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:pb-40 lg:pt-16 xl:min-h-[92vh]">
               <div className="max-w-[560px]">
                 <motion.p
-                  className={`text-xl font-medium ${slide.eyebrowColor} md:text-[22px]`}
+                  className={`text-xl font-medium ${slide.eyebrowColor} md:text-xl`}
                   initial={reduceMotion ? false : { opacity: 0, x: -40 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
@@ -91,7 +91,7 @@ export function HeroCarousel() {
                 </motion.p>
 
                 <motion.h1
-                  className={`hero-heading mt-4 max-w-[10ch] text-5xl leading-[0.96] ${slide.headingColor} sm:text-6xl lg:text-[5rem]`}
+                  className={`hero-heading mt-4 max-w-[10ch] text-5xl leading-[0.96] ${slide.headingColor} sm:text-5xl lg:text-5xl`}
                   initial={reduceMotion ? false : { opacity: 0, x: -40 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.16, duration: 0.5, ease: "easeOut" }}
@@ -116,7 +116,7 @@ export function HeroCarousel() {
                 >
                   <Link
                     href={slide.href}
-                    className="focus-ring inline-flex rounded-full bg-brand px-8 py-4 text-[1.05rem] font-black text-white transition hover:bg-ink"
+                    className="focus-ring inline-flex rounded-full bg-brand px-8 py-4 text-base font-black text-white transition hover:bg-ink"
                   >
                     {slide.primaryCta}
                   </Link>

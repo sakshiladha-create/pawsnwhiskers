@@ -15,10 +15,10 @@ import {
 
 export const heroSlides = [
   {
-    eyebrow: "Get 10% Discount",
-    title: "Where Being A Pet Is Just The Best",
-    copy: "Discover playful essentials, cozy beds, tasty treats, and everyday care for happy cats and dogs.",
-    primaryCta: "Shop Now",
+    eyebrow: "Online Pet Store",
+    title: "Pet Food, Toys & Essentials For Happy Pets",
+    copy: "Shop dog essentials, cat essentials, cozy pet beds, tasty treats, toys, and wellness care from a pet-parent approved online shop.",
+    primaryCta: "Explore Essentials",
     href: "/shop",
     image: "/images/slider_1.webp",
     bg: "bg-[#F4F4FF]",
@@ -28,8 +28,8 @@ export const heroSlides = [
   {
     eyebrow: "New Pet Essentials",
     title: "Everything Your Furry Friend Will Love",
-    copy: "Shop food, toys, grooming, beds, and accessories made for comfort, care, and fun.",
-    primaryCta: "Shop Now",
+    copy: "Find pet food, grooming supplies, flea and tick care, beds, toys, and accessories made for comfort, care, and fun.",
+    primaryCta: "Find the Perfect Pick",
     href: "/shop",
     image: "/images/slider_2.webp",
     bg: "bg-[#E8F8FF]",
@@ -42,22 +42,22 @@ export const serviceFeatures = [
   {
     icon: PackageCheck,
     title: "Free Delivery",
-    copy: "Delivery to any point of the city and regions."
+    copy: "Free shipping on eligible pet supplies and carefully packed essentials."
   },
   {
     icon: ShieldCheck,
     title: "Easy and Secure",
-    copy: "Online payment with credit and debit card."
+    copy: "Secure checkout for every pet food, toy, bed, and care order."
   },
   {
     icon: Headphones,
     title: "24/7 Support",
-    copy: "We are always ready to take your phone."
+    copy: "Friendly support for product guidance, orders, and pet care questions."
   },
   {
     icon: Bone,
-    title: "100% Organic",
-    copy: "All products are 100% organic, certified."
+    title: "Quality Checked",
+    copy: "Pet-parent approved picks for dogs, cats, wellness, play, and comfort."
   }
 ];
 

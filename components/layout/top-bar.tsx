@@ -2,7 +2,7 @@ import { Mail, Phone } from "lucide-react";
 
 export function TopBar() {
   return (
-    <div className="hidden border-b border-black/5 bg-ink text-white md:block">
+    <div className="hidden border-b border-black/5 bg-[#4c6795] text-white md:block">
       <div className="container-px flex h-10 items-center justify-between text-sm">
         <div className="flex items-center gap-6">
           <a className="flex items-center gap-2 transition-colors hover:text-peach focus-ring" href="tel:+18005550198">
