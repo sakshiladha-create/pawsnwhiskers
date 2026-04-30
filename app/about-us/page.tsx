@@ -2,8 +2,10 @@ import { AboutFaq } from "@/components/about/about-faq";
 import { AboutTestimonials } from "@/components/about/about-testimonials";
 import { BrandStory } from "@/components/about/brand-story";
 import { CoreValues } from "@/components/about/core-values";
+import { KnowUsSection } from "@/components/about/know-us-section";
 import { PetVideoSection } from "@/components/about/pet-video-section";
 import { WhyChooseUs } from "@/components/about/why-choose-us";
+import { CoreNutritionalPrinciples } from "@/components/home/core-nutritional-principles";
 import { UtilityShortcuts } from "@/components/home/utility-shortcuts";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -24,13 +26,13 @@ export default function AboutUsPage() {
           variant="about"
         />
         <BrandStory />
-        <CoreValues />
         <PetVideoSection />
-        <AboutTestimonials />
+        <CoreValues />
+        <KnowUsSection />
         <WhyChooseUs />
+        {/* <CoreNutritionalPrinciples /> */}
         <SupportStrip />
         <AboutFaq />
-        <UtilityShortcuts />
       </main>
       <Footer />
     </>

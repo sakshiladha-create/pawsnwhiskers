@@ -9,23 +9,15 @@ export function BrandStory() {
       <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{brandStory.eyebrow}</p>
-          <h2 className="mt-3 text-4xl font-black leading-tight text-ink md:text-5xl">{brandStory.title}</h2>
+          <h2 className="mt-3 text-4xl font-black leading-tight text-[#4C6795] md:text-4xl">{brandStory.title}</h2>
           <div className="mt-6 space-y-4 text-base font-semibold leading-8 text-ink/64">
             {brandStory.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            {storyHighlights.map((highlight) => (
-              <div key={highlight} className="flex items-center gap-3 rounded-2xl bg-white p-4 font-black text-ink shadow-card">
-                <CheckCircle2 className="h-5 w-5 text-brand" aria-hidden />
-                {highlight}
-              </div>
-            ))}
-          </div>
         </div>
         <div className="relative">
-          <div className="absolute -left-5 -top-5 h-28 w-28 rounded-full bg-mint" />
+          <div className="absolute -right-5 -top-5 h-28 w-28 rounded-full bg-brand" />
           <Image
             src={brandStory.image}
             alt={brandStory.alt}

@@ -6,7 +6,7 @@ import { CuratedCollection } from "@/components/home/curated-collection";
 import { Gallery } from "@/components/home/gallery";
 import { HomeBlogSection } from "@/components/home/home-blog-section";
 import { HeroCarousel } from "@/components/home/hero-carousel";
-import { KnowUsSection } from "@/components/home/know-us-section";
+import { KnowUsSection } from "@/components/about/know-us-section";
 import { LowPrices } from "@/components/home/low-prices";
 import { PetStatementSection } from "@/components/home/pet-statement-section";
 import { ServiceFeatures } from "@/components/home/service-features";
@@ -16,6 +16,7 @@ import { WideBanner } from "@/components/home/wide-banner";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TopBar } from "@/components/layout/top-bar";
+import { ServicesOfferSection } from "@/components/home/services-offer-section";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         <BrowseCategories />
         <CuratedCollection variant="kittens" />
         {/* <KnowUsSection /> */}
-        <CoreNutritionalPrinciples />
+        <ServicesOfferSection />
         <CuratedCollection variant="puppies" />
         <WideBanner />
         <TabbedProducts />

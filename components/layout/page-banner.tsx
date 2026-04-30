@@ -15,32 +15,17 @@ type PageBannerProps = {
   variant?: "default" | "shop" | "blog" | "contact" | "about";
 };
 
-const variantImages: Record<NonNullable<PageBannerProps["variant"]>, { left: string; right: string }> = {
-  default: {
-    left: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=900",
-    right: "https://images.pexels.com/photos/23849247/pexels-photo-23849247.jpeg?auto=compress&cs=tinysrgb&w=900"
-  },
-  shop: {
-    left: "https://images.pexels.com/photos/8434635/pexels-photo-8434635.jpeg?auto=compress&cs=tinysrgb&w=900",
-    right: "https://images.pexels.com/photos/5732478/pexels-photo-5732478.jpeg?auto=compress&cs=tinysrgb&w=900"
-  },
-  blog: {
-    left: "https://images.pexels.com/photos/7516508/pexels-photo-7516508.jpeg?auto=compress&cs=tinysrgb&w=900",
-    right: "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&w=900"
-  },
-  contact: {
-    left: "https://images.pexels.com/photos/29971026/pexels-photo-29971026.jpeg?auto=compress&cs=tinysrgb&w=900",
-    right: "https://images.pexels.com/photos/23849247/pexels-photo-23849247.jpeg?auto=compress&cs=tinysrgb&w=900"
-  },
-  about: {
-    left: "https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&w=900",
-    right: "https://images.pexels.com/photos/1669962/pexels-photo-1669962.jpeg?auto=compress&cs=tinysrgb&w=900"
-  }
+const variantBackgrounds: Record<NonNullable<PageBannerProps["variant"]>, string> = {
+  default: "https://images.pexels.com/photos/5731866/pexels-photo-5731866.jpeg?auto=compress&cs=tinysrgb&w=1800",
+  shop: "https://images.pexels.com/photos/5731866/pexels-photo-5731866.jpeg?auto=compress&cs=tinysrgb&w=1800",
+  blog: "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&w=1800",
+  contact: "https://images.pexels.com/photos/23849247/pexels-photo-23849247.jpeg?auto=compress&cs=tinysrgb&w=1800",
+  about: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1800"
 };
 
 function PawPattern() {
   return (
-    <svg className="absolute inset-0 h-full w-full opacity-[0.08]" aria-hidden>
+    <svg className="absolute inset-0 z-20 h-full w-full opacity-0" aria-hidden>
       <defs>
         <pattern id="page-banner-paws" width="116" height="104" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
           <g fill="white">
@@ -64,28 +49,16 @@ export function PageBanner({
   backgroundImage,
   variant = "default"
 }: PageBannerProps) {
-  const images = variantImages[variant];
+  const resolvedBackgroundImage = backgroundImage ?? variantBackgrounds[variant];
 
   return (
-    <section className="relative isolate flex min-h-[370px] w-full items-center justify-center overflow-hidden bg-[#4C6795] px-4 pb-20 pt-12 text-center sm:min-h-[400px] md:min-h-[420px] lg:min-h-[500px] xl:min-h-[540px]">
-      {backgroundImage ? (
-        <Image src={backgroundImage} alt="" fill priority sizes="100vw" className="z-[-3] object-cover opacity-20 mix-blend-soft-light" />
-      ) : null}
-      <div className="absolute inset-0 z-[-2] bg-[#4C6795]/92" aria-hidden />
+    <section className="relative h-[370px] w-full overflow-hidden bg-[#4C6795] px-4 text-center sm:h-[390px] md:h-[420px] lg:h-[520px]">
+      <Image src={resolvedBackgroundImage} alt="" fill priority sizes="100vw" className="object-cover" />
+      <div className="absolute inset-0 z-10 bg-[#4C6795]/70" aria-hidden />
       <PawPattern />
 
-      <div className="absolute bottom-16 left-[4%] z-0 hidden h-[250px] w-[220px] overflow-hidden rounded-full bg-white/12 shadow-soft md:block lg:bottom-[70px] lg:h-[330px] lg:w-[290px] xl:h-[360px] xl:w-[320px]">
-        <Image src={images.left} alt="" fill priority sizes="320px" className="object-cover object-center" />
-      </div>
-      <div className="absolute bottom-16 right-[3%] z-0 hidden h-[270px] w-[230px] overflow-hidden rounded-full bg-white/12 shadow-soft md:block lg:bottom-[70px] lg:h-[360px] lg:w-[300px] xl:h-[390px] xl:w-[330px]">
-        <Image src={images.right} alt="" fill priority sizes="330px" className="object-cover object-center" />
-      </div>
-
-      <div className="pointer-events-none absolute left-4 top-10 h-28 w-28 rounded-full border border-white/15 md:left-[18%] md:top-16" aria-hidden />
-      <div className="pointer-events-none absolute bottom-32 right-8 h-20 w-20 rounded-full bg-white/8 blur-sm md:right-[24%]" aria-hidden />
-
-      <div className="relative z-10 mx-auto max-w-[760px]">
-        <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[0.95] text-white drop-shadow-sm md:text-5xl lg:text-[56px]">
+      <div className="relative z-30 mx-auto flex h-full max-w-[760px] flex-col items-center justify-center pb-16 pt-10">
+        <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[0.95] text-white md:text-5xl lg:text-[56px]">
           {title}
         </h1>
         {subtitle ? (
@@ -100,7 +73,7 @@ export function PageBanner({
               return (
                 <span key={`${item.label}-${index}`} className="inline-flex items-center gap-2">
                   {item.href && !isLast ? (
-                    <Link href={item.href} className="focus-ring transition hover:text-brand">
+                    <Link href={item.href} className="transition hover:text-brand">
                       {item.label}
                     </Link>
                   ) : (
@@ -114,10 +87,19 @@ export function PageBanner({
         ) : null}
       </div>
 
-      <svg className="absolute bottom-0 left-0 right-0 z-[1] h-[96px] w-full md:h-[160px] lg:h-[185px]" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden>
-        <path d="M0,132 C170,170 330,168 500,110 C690,45 840,74 1010,135 C1180,190 1320,125 1440,100 L1440,190 L0,190 Z" fill="rgba(255,255,255,0.36)" />
-        <path d="M0,120 C190,170 360,160 520,100 C690,35 840,80 1010,135 C1180,190 1320,125 1440,100 L1440,190 L0,190 Z" fill="white" />
-      </svg>
+      <div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden leading-none" aria-hidden>
+        <svg
+          className="relative block h-[96px] w-full md:h-[145px] lg:h-[170px]"
+          viewBox="0 0 1440 180"
+          preserveAspectRatio="none"
+          style={{ display: "block", marginBottom: "-1px" }}
+        >
+          <path
+            fill="#ffffff"
+            d="M0,78 C155,112 335,118 520,86 C690,56 840,30 1030,66 C1208,100 1288,120 1440,60 L1440,180 L0,180 Z"
+          />
+        </svg>
+      </div>
     </section>
   );
 }
