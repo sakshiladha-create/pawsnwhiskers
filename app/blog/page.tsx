@@ -1,8 +1,8 @@
 import { BlogGrid } from "@/components/blog/blog-grid";
-import { BlogHero } from "@/components/blog/blog-hero";
 import { FeaturedPost } from "@/components/blog/featured-post";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { PageBanner } from "@/components/layout/page-banner";
 import { TopBar } from "@/components/layout/top-bar";
 import { getAllBlogPosts, getFeaturedBlogPost, getLatestBlogPosts } from "@/data/blog-data";
 
@@ -16,7 +16,12 @@ export default function BlogPage() {
       <TopBar />
       <Header />
       <main>
-        <BlogHero />
+        <PageBanner
+          title="Blog"
+          subtitle="Pet care tips, product guides, and playful ideas for everyday pet parents."
+          breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
+          variant="blog"
+        />
         <FeaturedPost post={featuredPost} />
         <BlogGrid posts={posts} latestPosts={latestPosts} />
       </main>

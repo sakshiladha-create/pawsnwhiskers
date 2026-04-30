@@ -31,17 +31,17 @@ export function Testimonials() {
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-20 overflow-hidden" aria-hidden>
         <svg viewBox="0 0 1440 160" className="h-full w-full" preserveAspectRatio="none">
-          <path d="M0,44 C140,58 286,30 434,44 C586,58 728,22 882,30 C1020,38 1184,20 1440,34 L1440,0 L0,0 Z" fill="#FFFDF8" />
-          <path d="M0,45 C152,57 292,31 438,45 C586,59 730,22 886,31 C1034,39 1190,21 1440,35" fill="none" stroke="#FFFDF8" strokeWidth="2.2" strokeLinecap="round" />
-          <path d="M22,49 94,47 M198,43 258,40 M466,42 538,38 M826,32 890,31 M1184,28 1266,31 M1334,35 1398,37" fill="none" stroke="#FFFDF8" strokeWidth="1.4" strokeLinecap="round" />
+          <path d="M0,44 C140,58 286,30 434,44 C586,58 728,22 882,30 C1020,38 1184,20 1440,34 L1440,0 L0,0 Z" fill="#fff" />
+          <path d="M0,45 C152,57 292,31 438,45 C586,59 730,22 886,31 C1034,39 1190,21 1440,35" fill="none" stroke="#FFF" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M22,49 94,47 M198,43 258,40 M466,42 538,38 M826,32 890,31 M1184,28 1266,31 M1334,35 1398,37" fill="none" stroke="#FFF" strokeWidth="1.4" strokeLinecap="round" />
         </svg>
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-20 overflow-hidden" aria-hidden>
         <svg viewBox="0 0 1440 160" className="h-full w-full" preserveAspectRatio="none">
-          <path d="M0,114 C154,92 300,132 448,116 C606,100 734,90 876,106 C1034,124 1186,132 1440,116 L1440,160 L0,160 Z" fill="#FFFDF8" />
-          <path d="M0,113 C150,92 302,130 450,115 C604,100 732,91 878,106 C1032,121 1188,132 1440,117" fill="none" stroke="#FFFDF8" strokeWidth="2.2" strokeLinecap="round" />
-          <path d="M28,117 100,112 M236,126 304,121 M534,108 606,105 M786,107 862,110 M1098,124 1178,121 M1280,115 1380,119" fill="none" stroke="#FFFDF8" strokeWidth="1.4" strokeLinecap="round" />
+          <path d="M0,114 C154,92 300,132 448,116 C606,100 734,90 876,106 C1034,124 1186,132 1440,116 L1440,160 L0,160 Z" fill="#FFF" />
+          <path d="M0,113 C150,92 302,130 450,115 C604,100 732,91 878,106 C1032,121 1188,132 1440,117" fill="none" stroke="#FFF" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M28,117 100,112 M236,126 304,121 M534,108 606,105 M786,107 862,110 M1098,124 1178,121 M1280,115 1380,119" fill="none" stroke="#FFF" strokeWidth="1.4" strokeLinecap="round" />
         </svg>
       </div>
 

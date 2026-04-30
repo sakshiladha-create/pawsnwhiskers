@@ -4,15 +4,12 @@ import { Heart } from "lucide-react";
 import Link from "next/link";
 import { useShop } from "@/context/shop-context";
 import { ProductGrid } from "@/components/shop/product-grid";
-import { ShopHero } from "@/components/shop/shop-hero";
 
 export function WishlistPageContent() {
   const { wishlistItems } = useShop();
 
   return (
-    <>
-      <ShopHero title="My Wishlist" copy="Keep your favorite pet finds in one cheerful place." compact />
-      <section className="container-px py-12">
+    <section className="container-px py-12">
         {wishlistItems.length ? (
           <ProductGrid products={wishlistItems} columns={3} />
         ) : (
@@ -25,7 +22,6 @@ export function WishlistPageContent() {
             </Link>
           </div>
         )}
-      </section>
-    </>
+    </section>
   );
 }

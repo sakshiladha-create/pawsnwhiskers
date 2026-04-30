@@ -6,15 +6,12 @@ import { ShoppingBag, Trash2 } from "lucide-react";
 import { formatCurrency } from "@/data/shop-data";
 import { useShop } from "@/context/shop-context";
 import { QuantitySelector } from "@/components/shop/quantity-selector";
-import { ShopHero } from "@/components/shop/shop-hero";
 
 export function CartPageContent() {
   const { cartItems, cartTotal, removeFromCart, updateQuantity } = useShop();
 
   return (
-    <>
-      <ShopHero title="Shopping Cart" copy="Review your pet picks before checkout." compact />
-      <section className="container-px py-12">
+    <section className="container-px py-12">
         {cartItems.length ? (
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="space-y-4">
@@ -79,7 +76,6 @@ export function CartPageContent() {
             </Link>
           </div>
         )}
-      </section>
-    </>
+    </section>
   );
 }

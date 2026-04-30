@@ -47,7 +47,7 @@ export function Footer() {
   <div className="absolute inset-x-0 top-[92px] bottom-0 z-0 bg-[#F5F5F5]" aria-hidden="true" />
 
   {/* Top layered waves */}
-  <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[150px] overflow-hidden" aria-hidden="true">
+  <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[152px] overflow-hidden" aria-hidden="true">
     <svg viewBox="0 0 1440 150" preserveAspectRatio="none" className="h-full w-full">
       {/* back grey wave visible on white */}
       <path

@@ -39,7 +39,7 @@ export function CategorySidebar(props: CategorySidebarProps) {
         <div className="mt-4 space-y-4">
           {shopCategories.map((category) => (
             <div key={category.slug}>
-              <h3 className="text-sm font-black uppercase tracking-[0.12em] text-brand">{category.title}</h3>
+              <h3 className="text-sm font-black uppercase tracking-[0.12em] text-[#4C6795]">{category.title}</h3>
               <ul className="mt-2 space-y-1">
                 {category.subcategories.map((sub) => {
                   const collection = getCollection(category.slug, sub.toLowerCase().replace(/&/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""));

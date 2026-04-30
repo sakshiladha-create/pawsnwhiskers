@@ -13,9 +13,9 @@ export function ProductInfo({ product }: { product: ShopProduct }) {
   const wished = isInWishlist(product.id);
 
   return (
-    <section className="rounded-[32px] bg-white p-6 shadow-soft md:sticky md:top-28 md:p-8">
+    <section className="rounded-[32px] bg-white p-6 shadow-soft md:sticky md:top-28 md:p-8 ">
       <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{product.subcategoryTitle}</p>
-      <h1 className="mt-3 text-4xl font-black leading-tight text-ink md:text-5xl">{product.name}</h1>
+      <h1 className="mt-3 text-4xl font-black leading-tight text-[#4C6795] md:text-5xl">{product.name}</h1>
       <div className="mt-4 flex flex-wrap items-center gap-3 text-sm font-black text-ink/65">
         <span className="flex items-center gap-1">
           <Star className="h-4 w-4 fill-brand text-brand" aria-hidden />
@@ -52,13 +52,12 @@ export function ProductInfo({ product }: { product: ShopProduct }) {
           onClick={() => toggleWishlist(product)}
         >
           <Heart className={`h-5 w-5 ${wished ? "fill-current" : ""}`} aria-hidden />
-          Wishlist
         </button>
       </div>
 
-      <Link href="/cart" className="focus-ring mt-4 inline-flex min-h-14 items-center justify-center rounded-full bg-ink px-7 font-black text-white transition hover:bg-brand">
+      {/* <Link href="/cart" className="focus-ring mt-4 inline-flex min-h-14 items-center justify-center rounded-full bg-ink px-7 font-black text-white transition hover:bg-brand">
         Buy Now
-      </Link>
+      </Link> */}
 
       <div className="mt-8 space-y-3 rounded-[24px] bg-cream p-5">
         <div className="flex items-center gap-3 text-sm font-bold text-ink/72">

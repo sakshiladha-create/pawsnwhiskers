@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { FilterDrawer } from "@/components/shop/filter-drawer";
 import { CategorySidebar } from "@/components/shop/category-sidebar";
 import { ProductToolbar } from "@/components/shop/product-toolbar";
@@ -86,22 +85,9 @@ export function CategoryPageContent({ categorySlug, subcategorySlug, products }:
 
   return (
     <section className="container-px py-10">
-      <nav aria-label="Breadcrumb" className="mb-6 text-sm font-black text-ink/52">
-        <Link href="/" className="focus-ring hover:text-brand">Home</Link> /{" "}
-        <Link href="/shop" className="focus-ring hover:text-brand">Shop</Link> /{" "}
-        <span>{collection?.categoryTitle}</span> / <span>{collection?.title}</span>
-      </nav>
-
-      <div className="mb-8 overflow-hidden rounded-[34px] bg-white shadow-soft lg:grid lg:grid-cols-[0.82fr_1.18fr]">
-        <div className="p-6 md:p-8">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{collection?.categoryTitle}</p>
-          <h1 className="mt-3 text-4xl font-black text-ink md:text-5xl">{collection?.title}</h1>
-          <p className="mt-4 max-w-xl text-sm font-semibold leading-7 text-ink/62">{collection?.description}</p>
-          <p className="mt-6 text-sm font-black text-ink/55">Price range: {formatCurrency(minPrice)} - {formatCurrency(maxPrice)}</p>
-        </div>
-        {collection ? (
-          <div className="min-h-[260px] bg-cover bg-center" style={{ backgroundImage: `url(${collection.image})` }} aria-hidden />
-        ) : null}
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{collection?.categoryTitle}</p>
+        <p className="text-sm font-black text-ink/55">Price range: {formatCurrency(minPrice)} - {formatCurrency(maxPrice)}</p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
