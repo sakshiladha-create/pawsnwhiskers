@@ -15,6 +15,7 @@ export function CollectionCard({ collection }: { collection: ShopCollection }) {
           alt={collection.alt}
           width={900}
           height={640}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="h-60 w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </div>

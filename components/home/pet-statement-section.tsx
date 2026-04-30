@@ -26,7 +26,7 @@ export function PetStatementSection() {
                 aria-hidden
               />
               <p className="text-sm font-black tracking-[0.04em] text-ink">Happy Pets</p>
-              <h2 className="mt-3 px-2 text-[1.7rem] leading-[1.3] text-ink md:text-[1.75rem] lg:text-[1.75rem]">
+              <h2 className="mt-3 px-2 text-2xl leading-[1.3] text-ink md:text-2xl lg:text-2xl">
                 Life&apos;s Better With Paws! Discover A Fun, Colorful World Of Pet Care Made For Those Who Love To
                 Play, Cuddle, And Share Every Little Adventure Together.
               </h2>

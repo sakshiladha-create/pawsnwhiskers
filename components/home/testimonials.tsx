@@ -97,7 +97,7 @@ export function Testimonials() {
           onMouseLeave={() => setReviewsPaused(false)}
         >
           <motion.div
-            className="flex min-w-max gap-5 pr-4"
+            className="flex w-max max-w-none gap-5 pr-4"
             animate={
               reduceMotion || reviewsPaused
                 ? undefined
@@ -112,7 +112,7 @@ export function Testimonials() {
             {reviewTrack.map((testimonial, index) => (
               <motion.article
                 key={`${testimonial.name}-${index}`}
-                className="group flex w-[620px] overflow-hidden rounded-[28px] bg-transparent"
+                className="group flex w-[min(86vw,620px)] overflow-hidden rounded-[28px] bg-transparent"
                 initial={reduceMotion ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}

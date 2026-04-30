@@ -42,7 +42,7 @@ export function PromoBanners() {
             </p>
 
             <h2
-              className="mt-3 text-[2.35rem] font-black leading-tight text-[#4C6795] md:text-[3.2rem]"
+              className="mt-3 text-4xl font-black leading-tight text-[#4C6795] md:text-5xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Who are waiting for you?
@@ -79,13 +79,13 @@ export function PromoBanners() {
                       ) : null}
 
                       <h3
-                        className="max-w-[280px] text-[2rem] font-black leading-[1.05] text-white md:text-[2.25rem]"
+                        className="max-w-[280px] text-3xl font-black leading-[1.05] text-white md:text-3xl"
                         style={{ fontFamily: "var(--font-heading)" }}
                       >
                         {promo.title}
                       </h3>
 
-                      <p className="mt-4 max-w-[250px] text-[1rem] font-semibold leading-7 text-white/95">
+                      <p className="mt-4 max-w-[250px] text-base font-semibold leading-7 text-white/95">
                         {promo.copy}
                       </p>
 

@@ -17,7 +17,7 @@ export function ShopHero({ title, copy, eyebrow = "Pet Shop", compact = false }:
             <Sparkles className="h-4 w-4" aria-hidden />
             {eyebrow}
           </p>
-          <h1 className={`mt-6 font-black leading-[0.95] text-ink ${compact ? "text-4xl md:text-5xl" : "text-5xl md:text-6xl"}`}>{title}</h1>
+          <h1 className={`mt-6 font-black leading-[0.95] text-ink ${compact ? "text-4xl md:text-5xl" : "text-5xl md:text-5xl"}`}>{title}</h1>
           <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-ink/68 md:text-lg">{copy}</p>
           {!compact ? (
             <div className="mt-8 flex flex-wrap gap-3">

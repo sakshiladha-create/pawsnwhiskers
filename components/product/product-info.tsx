@@ -15,7 +15,7 @@ export function ProductInfo({ product }: { product: ShopProduct }) {
   return (
     <section className="rounded-[32px] bg-white p-6 shadow-soft md:sticky md:top-28 md:p-8 ">
       <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{product.subcategoryTitle}</p>
-      <h1 className="mt-3 text-4xl font-black leading-tight text-[#4C6795] md:text-5xl">{product.name}</h1>
+      <h2 className="mt-3 text-4xl font-black leading-tight text-[#4C6795] md:text-5xl">{product.name}</h2>
       <div className="mt-4 flex flex-wrap items-center gap-3 text-sm font-black text-ink/65">
         <span className="flex items-center gap-1">
           <Star className="h-4 w-4 fill-brand text-brand" aria-hidden />
@@ -31,13 +31,19 @@ export function ProductInfo({ product }: { product: ShopProduct }) {
         {product.inStock ? "In stock" : "Sold out"}
       </p>
       <p className="mt-4 text-base font-semibold leading-7 text-ink/65">{product.shortDescription}</p>
+      <ul className="mt-5 grid gap-2 rounded-[24px] bg-[#FFF7F0] p-4 text-sm font-bold text-ink/68 sm:grid-cols-2">
+        <li>Pet-parent approved quality</li>
+        <li>Secure checkout</li>
+        <li>Easy returns on eligible orders</li>
+        <li>{product.bestSeller ? "Best seller" : product.isNew ? "New arrival" : "Quality checked"}</li>
+      </ul>
 
-      <div className="mt-7 flex flex-wrap items-center gap-4">
+      <div className="mt-7 flex flex-col items-stretch gap-4 sm:flex-row sm:flex-wrap sm:items-center">
         <QuantitySelector value={quantity} onChange={(next) => setQuantity(Math.max(1, next))} />
         <button
           type="button"
           disabled={!product.inStock}
-          className="focus-ring inline-flex min-h-14 items-center gap-2 rounded-full bg-brand px-7 font-black text-white transition hover:bg-ink disabled:cursor-not-allowed disabled:opacity-45"
+          className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-brand px-7 font-black text-white transition hover:bg-ink disabled:cursor-not-allowed disabled:opacity-45 sm:w-auto"
           onClick={() => addToCart(product, quantity)}
         >
           <ShoppingBag className="h-5 w-5" aria-hidden />
@@ -46,7 +52,7 @@ export function ProductInfo({ product }: { product: ShopProduct }) {
         <button
           type="button"
           aria-pressed={wished}
-          className={`focus-ring inline-flex min-h-14 items-center gap-2 rounded-full px-6 font-black transition ${
+          className={`focus-ring inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full px-6 font-black transition sm:w-auto ${
             wished ? "bg-ink text-white" : "bg-cream text-ink hover:bg-brand hover:text-white"
           }`}
           onClick={() => toggleWishlist(product)}

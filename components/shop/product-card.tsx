@@ -57,6 +57,7 @@ export function ProductCard({ product }: { product: ShopProduct }) {
             alt={product.alt}
             width={900}
             height={900}
+            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
             className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
           />
         </Link>

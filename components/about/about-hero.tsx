@@ -24,7 +24,7 @@ export function AboutHero() {
               {aboutHero.eyebrow}
             </motion.p>
             <motion.h1
-              className="mt-6 text-5xl font-black leading-[0.95] text-ink md:text-6xl"
+              className="mt-6 text-5xl font-black leading-[0.95] text-ink md:text-5xl"
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}

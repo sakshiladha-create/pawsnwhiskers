@@ -1,12 +1,13 @@
 "use client";
 
-import { Heart, Menu, Search, ShoppingBag, UserRound } from "lucide-react";
+import { Heart, Menu, ShoppingBag, UserRound } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/menu-data";
 import { MegaMenu } from "@/components/navigation/mega-menu";
 import { MobileMenu } from "@/components/navigation/mobile-menu";
+import { GlobalSearch } from "@/components/layout/global-search";
 import { useShop } from "@/context/shop-context";
 
 export function Header() {
@@ -46,12 +47,13 @@ export function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 bg-white/20 backdrop-blur-xl transition-shadow ${scrolled ? "shadow-card" : "shadow-none"}`}>
-      <div className="relative border-b border-black/5">
-        <div className="container-px flex h-24 items-center justify-between gap-4">
-          <Link href="/" className="focus-ring flex min-w-[164px] items-center" aria-label="Paws N Whiskers home">
-            <Image src="/images/Pawlogo.png" alt="Paws N Whiskers" width={190} height={58} className="h-24 w-auto object-contain" priority />
-          </Link>
+    <>
+      <header className={`sticky top-0 z-50 bg-white/20 backdrop-blur-xl transition-shadow ${scrolled ? "shadow-card" : "shadow-none"}`}>
+        <div className="relative border-b border-black/5">
+          <div className="container-px flex h-20 items-center justify-between gap-2 sm:gap-4 lg:h-24">
+            <Link href="/" className="focus-ring flex min-w-[118px] items-center sm:min-w-[164px]" aria-label="Paws N Whiskers home">
+              <Image src="/images/Pawlogo.png" alt="Paws N Whiskers" width={190} height={58} className="h-20 w-auto object-contain lg:h-24" priority />
+            </Link>
 
           <nav className="hidden items-center justify-center gap-2 lg:flex" aria-label="Main navigation" onBlur={handleNavBlur}>
             {navItems.map((item) =>
@@ -86,16 +88,11 @@ export function Header() {
           </nav>
 
           <div className="flex items-center justify-end gap-2">
-            <button type="button" aria-label="Search" className="focus-ring hidden h-11 w-11 items-center justify-center rounded-full bg-cream text-ink transition hover:bg-brand hover:text-white sm:flex">
-              <Search className="h-5 w-5" aria-hidden />
-            </button>
-            <Link href="/account" aria-label="Account" className="focus-ring hidden h-11 w-11 items-center justify-center rounded-full bg-cream text-ink transition hover:bg-brand hover:text-white sm:flex">
-              <UserRound className="h-5 w-5" aria-hidden />
-            </Link>
+            <GlobalSearch />
             <Link href="/wishlist" aria-label="Wishlist" className="focus-ring relative hidden h-11 w-11 items-center justify-center rounded-full bg-cream text-ink transition hover:bg-brand hover:text-white sm:flex">
               <Heart className="h-5 w-5" aria-hidden />
               {wishlistCount ? (
-                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-[11px] font-black text-white">
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-xs font-black text-white">
                   {wishlistCount}
                 </span>
               ) : null}
@@ -103,7 +100,7 @@ export function Header() {
             <Link href="/cart" aria-label="Cart" className="focus-ring relative flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition hover:bg-brand">
               <ShoppingBag className="h-5 w-5" aria-hidden />
               {cartCount ? (
-                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-[11px] font-black text-white">
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-xs font-black text-white">
                   {cartCount}
                 </span>
               ) : null}
@@ -119,15 +116,16 @@ export function Header() {
           </div>
         </div>
 
-        <MegaMenu
-          open={megaOpen}
-          onClose={closeMega}
-          onMouseEnter={() => setMegaOpen(true)}
-          onMouseLeave={closeMega}
-          panelRef={panelRef}
-        />
-      </div>
+          <MegaMenu
+            open={megaOpen}
+            onClose={closeMega}
+            onMouseEnter={() => setMegaOpen(true)}
+            onMouseLeave={closeMega}
+            panelRef={panelRef}
+          />
+        </div>
+      </header>
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
-    </header>
+    </>
   );
 }

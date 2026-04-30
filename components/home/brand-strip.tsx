@@ -19,7 +19,7 @@ export function BrandStrip() {
                   height={60}
                   className="h-[46px] w-[46px] rounded-full object-cover"
                 />
-                <span className="mt-3 text-[15px] font-black text-[#3A2424]">{brand.name}</span>
+                <span className="mt-3 text-sm font-black text-[#3A2424]">{brand.name}</span>
               </div>
             ))}
           </div>

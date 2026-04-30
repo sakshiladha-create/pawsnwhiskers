@@ -86,7 +86,15 @@ export function CategoryPageContent({ categorySlug, subcategorySlug, products }:
   return (
     <section className="container-px py-10">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{collection?.categoryTitle}</p>
+        <div className="max-w-3xl">
+          <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">{collection?.categoryTitle}</p>
+          {collection ? (
+            <p className="mt-2 text-base font-semibold leading-7 text-ink/62">
+              Shop {collection.title.toLowerCase()} selected for pet-parent approved quality, everyday comfort, secure checkout,
+              and easy returns on eligible pet supplies.
+            </p>
+          ) : null}
+        </div>
         <p className="text-sm font-black text-ink/55">Price range: {formatCurrency(minPrice)} - {formatCurrency(maxPrice)}</p>
       </div>
 

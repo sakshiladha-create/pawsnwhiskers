@@ -1,27 +1,69 @@
+"use client";
+
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { contactFaqs } from "@/data/contact-data";
 import { SectionReveal } from "@/components/home/section-reveal";
 
 export function ContactFaqStrip() {
+  const [openIndex, setOpenIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+
   return (
-    <SectionReveal className="container-px py-12">
-      <div className="rounded-[34px] bg-[#FBE4D7] p-6 shadow-soft md:p-8">
-        <div className="mb-7 flex flex-col justify-between gap-3 md:flex-row md:items-end">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Quick help</p>
-            <h2 className="mt-2 text-4xl font-black text-ink">Before you send</h2>
-          </div>
-          <p className="max-w-md text-sm font-semibold leading-6 text-ink/62">
+    <SectionReveal className="bg-white py-16 md:py-24">
+      <div className="container-px">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <p className="text-sm font-black uppercase tracking-[0.16em] text-brand">Quick help</p>
+          <h2 className="mt-2 text-4xl font-black leading-tight text-[#445b81] md:text-4xl" style={{ fontFamily: "var(--font-heading)" }}>
+            Before you send
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm font-semibold leading-6 text-ink/62">
             A few fast answers for common contact questions.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {contactFaqs.map((faq) => {
-            const Icon = faq.icon;
+
+        <div className="mx-auto max-w-[1240px] space-y-6">
+          {contactFaqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            const buttonId = `contact-faq-button-${index}`;
+            const panelId = `contact-faq-panel-${index}`;
+
             return (
-              <article key={faq.question} className="rounded-[24px] bg-white p-5 shadow-card">
-                <Icon className="h-6 w-6 text-brand" aria-hidden />
-                <h3 className="mt-4 text-lg font-black text-ink">{faq.question}</h3>
-                <p className="mt-2 text-sm font-semibold leading-6 text-ink/62">{faq.answer}</p>
+              <article
+                key={faq.question}
+                className={`overflow-hidden rounded-[10px] transition ${
+                  isOpen ? "bg-[#445b81] text-white" : "border border-dashed border-[#D8D8D8] bg-white text-[#111111]"
+                }`}
+              >
+                <button
+                  id={buttonId}
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  className={`focus-ring flex w-full items-center justify-between gap-4 px-6 text-left text-xl font-black md:px-8 ${
+                    isOpen ? "pb-5 pt-7 text-white md:text-xl" : "py-7 text-[#111111] md:text-xl"
+                  }`}
+                  onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                >
+                  {faq.question}
+                  <ChevronDown className={`h-5 w-5 shrink-0 transition ${isOpen ? "rotate-180 text-white" : "text-[#111111]"}`} aria-hidden />
+                </button>
+                <AnimatePresence initial={false}>
+                  {isOpen ? (
+                    <motion.div
+                      id={panelId}
+                      role="region"
+                      aria-labelledby={buttonId}
+                      initial={reduceMotion ? false : { height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="px-6 pb-12 text-base font-semibold leading-8 text-white md:px-8">{faq.answer}</p>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
               </article>
             );
           })}

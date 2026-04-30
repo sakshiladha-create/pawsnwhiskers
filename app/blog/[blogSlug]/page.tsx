@@ -6,7 +6,36 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { PageBanner } from "@/components/layout/page-banner";
 import { TopBar } from "@/components/layout/top-bar";
-import { getAllBlogPosts, getBlogCategoriesWithCount, getBlogPostBySlug, getLatestBlogPosts, getRelatedBlogPosts } from "@/data/blog-data";
+import { blogPosts, getAllBlogPosts, getBlogCategoriesWithCount, getBlogPostBySlug, getLatestBlogPosts, getRelatedBlogPosts } from "@/data/blog-data";
+import { blogPostingSchema, breadcrumbSchema, createSeoMetadata } from "@/lib/seo";
+
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({ blogSlug: post.slug }));
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ blogSlug: string }>;
+}) {
+  const { blogSlug } = await params;
+  const post = getBlogPostBySlug(blogSlug);
+
+  if (!post) {
+    return createSeoMetadata({
+      title: "Pet Care Article",
+      description: "Browse helpful pet care articles about dog essentials, cat essentials, nutrition, grooming, travel, and pet wellness.",
+      path: `/blog/${blogSlug}`
+    });
+  }
+
+  return createSeoMetadata({
+    title: post.title,
+    description: post.excerpt.slice(0, 158),
+    path: `/blog/${post.slug}`,
+    image: post.image
+  });
+}
 
 export default async function BlogDetailPage({
   params
@@ -19,6 +48,16 @@ export default async function BlogDetailPage({
   const currentIndex = post ? orderedPosts.findIndex((entry) => entry.slug === post.slug) : -1;
   const previousPost = currentIndex >= 0 ? orderedPosts[currentIndex + 1] ?? null : null;
   const nextPost = currentIndex > 0 ? orderedPosts[currentIndex - 1] ?? null : null;
+  const schemas = post
+    ? [
+        blogPostingSchema(post),
+        breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` }
+        ])
+      ]
+    : null;
 
   return (
     <>
@@ -37,6 +76,11 @@ export default async function BlogDetailPage({
               ]}
               backgroundImage={post.image}
               variant="blog"
+            />
+            <script
+              type="application/ld+json"
+              suppressHydrationWarning
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
             <BlogDetailHeader post={post} />
             <BlogArticleContent

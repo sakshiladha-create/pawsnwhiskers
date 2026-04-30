@@ -12,7 +12,7 @@ export function ServiceFeatures() {
                 <Icon className="h-12 w-12" strokeWidth={1.8} aria-hidden />
               </span>
               <div className="mt-4">
-                <h2 className="text-[2rem] font-black leading-none text-[#4C6795]">{feature.title}</h2>
+                <h2 className="text-3xl font-black leading-none text-[#4C6795]">{feature.title}</h2>
                 <p className="mt-3 text-base font-medium leading-8 text-ink/44">{feature.copy}</p>
               </div>
             </article>

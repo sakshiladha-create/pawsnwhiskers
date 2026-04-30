@@ -14,7 +14,7 @@ export function LatestPostsSidebar({ posts, title = "Latest Posts" }: { posts: B
                 <Image src={post.image} alt={post.imageAlt} width={176} height={176} className="h-[88px] w-[88px] object-cover transition duration-300 hover:scale-105" />
               </Link>
               <div className="min-w-0">
-                <p className="text-[11px] font-black uppercase tracking-[0.12em] text-brand">{post.category}</p>
+                <p className="text-xs font-black uppercase tracking-[0.12em] text-brand">{post.category}</p>
                 <h3 className="mt-1 line-clamp-2 text-sm font-black leading-5 text-ink">
                   <Link href={`/blog/${post.slug}`} className="focus-ring transition hover:text-brand">
                     {post.title}

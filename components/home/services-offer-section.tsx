@@ -29,7 +29,7 @@ function BrushIcon({ icon: Icon }: { icon: typeof Soup }) {
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" aria-hidden>
         <path
           d="M48 8C69 7 90 22 92 45c2 23-13 42-35 47C34 97 12 85 8 62 4 39 16 17 39 10c4-1 7-2 9-2Z"
-          fill="#DA8A70"
+          fill="#4C6795"
         />
         <path
           d="M28 13c18-11 43-4 55 13M88 39c8 24-9 46-31 52M17 71C5 48 15 24 36 13"
@@ -136,7 +136,7 @@ export function ServicesOfferSection() {
       >
         <div className="text-center">
           <p className="text-sm font-black uppercase tracking-[0.08em] text-brand">OUR SERVICES</p>
-          <h2 className="mt-5 text-[38px] font-black leading-none text-[#111] md:text-[44px]" style={{ fontFamily: "var(--font-heading)" }}>
+          <h2 className="mt-5 text-4xl font-black leading-none text-[#111] md:text-4xl" style={{ fontFamily: "var(--font-heading)" }}>
             What We Offer
           </h2>
         </div>
